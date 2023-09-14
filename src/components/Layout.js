@@ -1,9 +1,10 @@
 import Head from "next/head";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from 'react';
 import {useWindowResize} from '@/hooks/useWindowResize';
 
 export const Layout = ({ title, description = '테스트 디스크립션', children }) => {
     const canvasRef = useRef(null);
+    const [isMount, setIsMount] = useState(false);
     const [width] = useWindowResize();
 
     const shapeArray = useRef([]);
@@ -19,20 +20,24 @@ export const Layout = ({ title, description = '테스트 디스크립션', child
         const ctx = canvas.getContext('2d');
         const shapeCount = 6 + Math.floor(canvas.width / 300);
 
+        const randomSpeed = (speed = 1) => {
+            return (speed * Math.random()) - (speed / 2);
+        }
+
         shapeArray.current = [];
         // 작은 구형 생성
         for (let i = 0; i < shapeCount; i++) {
             const x = 20 + Math.random() * (canvas.width - 40);
             const y = 20 + Math.random() * (canvas.height - 40);
-            const dx = Math.random() - 0.5;
-            const dy = Math.random() - 0.5;
+            const dx = randomSpeed();
+            const dy = randomSpeed();
             const radius = 12 + (Math.random() * 16);
             const color = colors[Math.floor(Math.random() * colors.length)]; // Randomly pick a color
             shapeArray.current.push({ x, y, dx, dy, radius, color });
         }
         // 큰 구형 별도 추가
-        shapeArray.current.push({ x: canvas.width * 0.20, y: canvas.height * 0.25 , dx: (2 * Math.random()) - 1, dy: Math.random() - 0.5, radius: canvas.height * 0.20, color: '#5a91fe' });
-        shapeArray.current.push({ x: canvas.width * 0.80, y: canvas.height * 0.70, dx: (2 * Math.random()) - 1, dy: Math.random() - 0.5, radius: canvas.height * 0.15, color: '#16a184' });
+        shapeArray.current.push({ x: canvas.width * 0.20, y: canvas.height * 0.20 , dx: randomSpeed(), dy: randomSpeed(), radius: canvas.height * 0.20, color: '#5a91fe' });
+        shapeArray.current.push({ x: canvas.width * 0.80, y: canvas.height * 0.80, dx: randomSpeed(), dy: randomSpeed(), radius: canvas.height * 0.15, color: '#16a184' });
 
         if (drawInterval.current != null) {
             clearInterval(drawInterval.current);
@@ -76,8 +81,16 @@ export const Layout = ({ title, description = '테스트 디스크립션', child
     }
 
     useEffect(() => {
-        // 리사이즈시 재 렌더링
         initCanvas();
+        // 중복 렌더링 방지
+        setTimeout(() => {
+            setIsMount(true);
+        }, 350);
+    }, []);
+
+    useEffect(() => {
+        // 리사이즈시 재 렌더링
+        if (isMount) initCanvas();
     }, [width]);
 
     return (
