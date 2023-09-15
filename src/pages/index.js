@@ -2,10 +2,12 @@ import {Layout} from '@/components/Layout';
 import Image from 'next/image'
 import profilePng from '../assets/images/profile.jpg';
 import {Category} from '@/components/Category';
+import {ExperiencedProject} from '@/components/ExperiencedProject';
+import {ExperiencedProjectDetail} from '@/components/ExperiencedProjectDetail';
 
 export default function Home() {
   return (
-      <Layout title="타이틀">
+      <Layout title="resume.zeriong">
 
           {/* intro title */}
           <section>
@@ -62,7 +64,43 @@ export default function Home() {
               comment="총 1년 3개월"
               description="디스크립션입니다."
           >
-              경험한 프로젝트들 리스트
+              <ExperiencedProject
+                  name="ZETE 메모서비스"
+                  isPrivate={true}
+                  linkDemo="https://zete.zeriong.com/?type=demo&modal=sign-in"
+                  description="사용성을 극대화 하여 편리한 메모 기능과, AI(Chat GPT) 를 연동하여 검색 결과를 메모에 요약 반영 시킬 수 있는 서비스입니다."
+                  devPart={<>Frontend/Backend<br/>Engineer</>}
+                  devDateRange="2023.03 ~ 2023.09"
+                  devPeriod="6개월"
+              >
+                  <ExperiencedProjectDetail
+                      title="ReactQuery, Zustand 적용, 리팩토링 및 배포"
+                      linkGithub="https://github.com/zeriong/zete-zustand-reactQuery"
+                      devDateRange="2023.03 ~ 2023.09"
+                      list={[
+                          '기존에 사용하던 Redux와 다른 타입의 상태 관리에 대한 경험을 위해 상태관리 라이브러리를 ReactQuery, Zustand 조합으로 컨버팅',
+                          '다소 아쉬웠던 일부 코드 리팩토링',
+                          '서비스 환경에 대한 이해도를 높이기 위해 우분투 리눅스를 통한 서비스 환경구축, 오픈소스 SSL 인증서 적용',
+                          'PM2를 통한 서비스 관리 및 무중단 서비스 이해'
+                      ]}
+                      usedStack="ReactQuery, Zustand, Ubuntu Linux, PM2"
+                  />
+                  <ExperiencedProjectDetail
+                      title="메모서비스 기획 및 기능 개발"
+                      linkGithub="https://github.com/zeriong/zete"
+                      devDateRange="2023.08 ~ 2023.09"
+                      list={[
+                          '기존 사용하던 메모 서비스를 벤치하여 발전시키고 AI를 접목시켜 서비스 기획',
+                          'NestJS와 MariaDB를 기반으로 백엔드 설계 및 기능 개발',
+                          'React를 기반으로 프론트엔드의 메모, 카테고리, 태그에 대한 CRUD 인터페이스 구현',
+                          'Openai ChatGpt3.5 를 연동하여 채팅형식의 정보 검색과 요약된 정보를 응답하는 기능 개발',
+                          <>Openapi Generator 의 templates 기능을 통해 axios 통신 타입 파일을 커스텀하여 생성<span className="text-gray-400 ml-0.5">(생산성 증가)</span></>
+                      ]}
+                      usedStack="ReactQuery, Zustand, Ubuntu Linux, PM2"
+                  />
+              </ExperiencedProject>
+
+
           </Category>
       </Layout>
   )
