@@ -1,6 +1,7 @@
 import {Layout} from '@/components/Layout';
 import Image from 'next/image'
 import profilePng from '../assets/images/profile.jpg';
+import {Category} from '@/components/Category';
 
 export default function Home() {
   return (
@@ -55,6 +56,14 @@ export default function Home() {
                   소통과 공감은 제가 가진 가장 큰 강점이고 중요한 가치라고 생각합니다. 상대방의 감정을 배려하고 주변에 밝고 긍정적인 에너지를 전달하려 노력합니다.
               </p>
           </section>
+
+          <Category
+              name="Dev Experience"
+              comment="총 1년 3개월"
+              description="디스크립션입니다."
+          >
+              경험한 프로젝트들 리스트
+          </Category>
       </Layout>
   )
 }
