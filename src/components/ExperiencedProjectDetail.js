@@ -9,6 +9,7 @@ export const ExperiencedProjectDetail = (
         list,
         review,
         usedStack,
+        etcList,
     }
 ) => {
     return (
@@ -45,6 +46,17 @@ export const ExperiencedProjectDetail = (
                     <p className="text-gray-700 text-[18px] font-semibold">Review</p>
                     <p className="text-gray-600 mt-1">{review}</p>
                 </div>
+            )}
+
+            {etcList && (
+                etcList.map((val, idx) => {
+                    return (
+                        <div key={val.title + idx}>
+                            <p className="text-gray-700 text-[18px] font-semibold">{val.title}</p>
+                            <p className="text-gray-600 mt-1">{val.content}</p>
+                        </div>
+                    )
+                })
             )}
 
             {usedStack && (
