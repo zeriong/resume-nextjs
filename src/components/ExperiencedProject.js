@@ -12,6 +12,7 @@ export const ExperiencedProject = (
         devDateRange,
         devPeriod,
         children,
+        editGap,
     }
 ) => {
     return (
@@ -25,15 +26,16 @@ export const ExperiencedProject = (
                 </p>
                 {linkDemo && (
                     <a href={linkDemo}
+                       target='_blank'
                        className="flex items-center text-sm text-white bg-blue-500 rounded-full px-2.5 py-[1px]">
                         데모
                         <i className="arrow-right !border-white ml-0.5"></i>
                     </a>
                 )}
                 {linkGithub && (
-                    <a href={linkDemo} target="_blank"
+                    <a href={linkGithub} target="_blank"
                        className="flex items-center min-w-[40px] h-[22px] text-sm text-white bg-gray-600/90 rounded-full pl-1.5 pr-2">
-                        <Image src={gitSymbolSvg} className="w-[16px]" git=""/>
+                        <Image src={gitSymbolSvg} className="w-[16px]" alt='git'/>
                         <i className="arrow-right !border-white ml-0.5"></i>
                     </a>
                 )}
@@ -49,7 +51,7 @@ export const ExperiencedProject = (
                         {devPeriod}
                     </div>
                 </div>
-                <div className="flex flex-col gap-y-[44px]">
+                <div className={`flex flex-col ${editGap ? editGap : 'gap-y-[44px]'}`}>
                     {children}
                 </div>
             </div>

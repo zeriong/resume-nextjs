@@ -10,6 +10,8 @@ export const ExperiencedProjectDetail = (
         review,
         usedStack,
         etcList,
+        etcLinkDemo,
+        etcLinkGithub,
     }
 ) => {
     return (
@@ -52,7 +54,23 @@ export const ExperiencedProjectDetail = (
                 etcList.map((val, idx) => {
                     return (
                         <div key={val.title + idx}>
-                            <p className="text-gray-700 text-[18px] font-semibold">{val.title}</p>
+                            <div className="flex items-center gap-2">
+                                <p className="text-gray-700 text-[18px] font-semibold">{val.title}</p>
+                                {etcLinkDemo && (
+                                    <a href={etcLinkDemo}
+                                       className="flex items-center text-sm text-white bg-blue-500 rounded-full px-2.5 py-[1px]">
+                                        데모
+                                        <i className="arrow-right !border-white ml-0.5"></i>
+                                    </a>
+                                )}
+                                {etcLinkGithub && (
+                                    <a href={etcLinkGithub} target="_blank"
+                                       className="flex items-center min-w-[40px] h-[22px] text-sm text-white bg-gray-600/90 rounded-full pl-1.5 pr-2">
+                                        <Image src={gitSymbolSvg} className="w-[16px]" alt="git"/>
+                                        <i className="arrow-right !border-white ml-0.5"></i>
+                                    </a>
+                                )}
+                            </div>
                             <p className="text-gray-600 mt-1">{val.content}</p>
                         </div>
                     )

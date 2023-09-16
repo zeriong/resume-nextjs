@@ -16,7 +16,7 @@ export const Category = ({ name, comment, description, children }) => {
                     {description}
                 </p>
             )}
-            <div className="flex flex-col border-l border-gray-300/90 pl-8 mt-[53px] gap-y-[44px] max-md:pl-4">
+            <div className={`flex flex-col border-l border-gray-300/90 pl-8 gap-y-[44px] max-md:pl-4 ${name === 'Skills' ? 'mt-5' : 'mt-[53px]'}`}>
                 {children}
             </div>
             <p className="text-[36px] text-gray-400/80 font-semibold leading-none mt-1 max-sm:text-[28px]">
