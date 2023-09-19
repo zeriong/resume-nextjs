@@ -1,3 +1,11 @@
+/**
+ * 이력서 내용 카테고리 컴포넌트
+ *
+ * @param name - 카테고리 명칭
+ * @param comment - 카테고리 명칭 옆 주석 내용
+ * @param description - 카테고리 설명
+ * @param {React.ReactNode} children - 하위 노드
+ * */
 export const Category = ({ name, comment, description, children }) => {
     return (
         <section>
@@ -6,7 +14,7 @@ export const Category = ({ name, comment, description, children }) => {
                     {name}<span className="text-gray-400/80 ml-2">{'{'}</span>
                 </p>
                 {comment && (
-                    <p className="text-[16px] text-gray-800 bg-gray-200/80 ml-3 mt-1 whitespace-nowrap max-sm:ml-2">
+                    <p className="text-[16px] text-gray-800 ml-3 mt-1 whitespace-nowrap max-sm:ml-1.5 max-sm:text-[14px] max-sm:tracking-[-0.4px]">
                         {'//'} {comment}
                     </p>
                 )}
@@ -16,7 +24,7 @@ export const Category = ({ name, comment, description, children }) => {
                     {description}
                 </p>
             )}
-            <div className={`flex flex-col border-l border-gray-300/90 pl-8 gap-y-[44px] max-md:pl-4 ${name === 'Skills' ? 'mt-5' : 'mt-[53px]'}`}>
+            <div className="border-l border-gray-300/90 pl-8 max-md:pl-4">
                 {children}
             </div>
             <p className="text-[36px] text-gray-400/80 font-semibold leading-none mt-1 max-sm:text-[28px]">

@@ -1,21 +1,32 @@
 import Image from "next/image";
 import gitSymbolSvg from "@/assets/images/git-symbol.svg";
 
+/**
+ * @typedef {Object} addField
+ * @property title - 추가 항목의 제목
+ * @property content - 추가 항목의 내용
+ */
+
+/**
+ * Experienced 카테고리 내에 프로젝트의 세부정보 그룹 컴포넌트
+ *
+ * @param title - 부제
+ * @param linkGithub - 깃허브 링크 URL
+ * @param devDateRange - 진행 기간 (2023.09 ~ 2023.10)
+ * @param {array} devList - 불릿 포인트가 노출되는 개발 목록
+ * @param {addField[]} addFields - 추가적인 항목 리스트
+ * */
 export const ExperiencedProjectDetail = (
     {
         title,
         linkGithub,
         devDateRange,
-        list,
-        review,
-        usedStack,
-        etcList,
-        etcLinkDemo,
-        etcLinkGithub,
+        devList,
+        addFields,
     }
 ) => {
     return (
-        <div className="project flex flex-col gap-y-4">
+        <div className="flex flex-col gap-y-4">
             {title && (
                 <div>
                     <div className="flex items-center gap-x-2">
@@ -23,7 +34,8 @@ export const ExperiencedProjectDetail = (
                             {title}
                         </p>
                         {linkGithub && (
-                            <a href={linkGithub} target="_blank"
+                            <a href={linkGithub}
+                               target="_blank"
                                className="flex items-center min-w-[40px] h-[22px] text-sm text-white bg-gray-600/90 rounded-full pl-1.5 pr-2">
                                 <Image src={gitSymbolSvg} className="w-[16px]" alt="git"/>
                                 <i className="arrow-right !border-white ml-0.5"></i>
@@ -35,53 +47,21 @@ export const ExperiencedProjectDetail = (
                     </p>
                 </div>
             )}
-            {list && list.length > 0 && (
-                <ul>
-                    {list.map((item, idx) => (
+            {devList && devList.length > 0 && (
+                <ul className="bullet-list">
+                    {devList.map((item, idx) => (
                         <li key={idx}>{item}</li>
                     ))}
                 </ul>
             )}
 
-            {review && (
-                <div>
-                    <p className="text-gray-700 text-[18px] font-semibold">Review</p>
-                    <p className="text-gray-600 mt-1">{review}</p>
-                </div>
-            )}
-
-            {etcList && (
-                etcList.map((val, idx) => {
-                    return (
-                        <div key={val.title + idx}>
-                            <div className="flex items-center gap-2">
-                                <p className="text-gray-700 text-[18px] font-semibold">{val.title}</p>
-                                {etcLinkDemo && (
-                                    <a href={etcLinkDemo}
-                                       className="flex items-center text-sm text-white bg-blue-500 rounded-full px-2.5 py-[1px]">
-                                        데모
-                                        <i className="arrow-right !border-white ml-0.5"></i>
-                                    </a>
-                                )}
-                                {etcLinkGithub && (
-                                    <a href={etcLinkGithub} target="_blank"
-                                       className="flex items-center min-w-[40px] h-[22px] text-sm text-white bg-gray-600/90 rounded-full pl-1.5 pr-2">
-                                        <Image src={gitSymbolSvg} className="w-[16px]" alt="git"/>
-                                        <i className="arrow-right !border-white ml-0.5"></i>
-                                    </a>
-                                )}
-                            </div>
-                            <p className="text-gray-600 mt-1">{val.content}</p>
-                        </div>
-                    )
-                })
-            )}
-
-            {usedStack && (
-                <div>
-                    <p className="text-gray-700 text-[18px] font-semibold">Used Stack</p>
-                    <p className="text-gray-600 mt-1">{usedStack}</p>
-                </div>
+            {addFields && addFields.length > 0 &&
+                addFields.map((item, idx) => (
+                    <div key={idx}>
+                        <p className="text-gray-700 text-[18px] font-semibold">{item.title}</p>
+                        <p className="text-gray-600 mt-1">{item.content}</p>
+                    </div>
+                )
             )}
         </div>
     )

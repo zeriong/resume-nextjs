@@ -2,9 +2,16 @@ import Head from "next/head";
 import {useEffect, useRef, useState} from 'react';
 import {useWindowResize} from '@/hooks/useWindowResize';
 
+/**
+ * 페이지를 감싸는 레이아웃 컴포넌트
+ * SEO 데이터 설정
+ *
+ * @param title - 페이지 타이틀
+ * @param description - 페이지 설명
+ * @param {React.ReactNode} children - 하위 노드
+ * */
 export const Layout = ({ title, description = '테스트 디스크립션', children }) => {
     const canvasRef = useRef(null);
-    const [isMount, setIsMount] = useState(false);
     const [width] = useWindowResize();
 
     const shapeArray = useRef([]);
@@ -12,12 +19,11 @@ export const Layout = ({ title, description = '테스트 디스크립션', child
     const colors = [ '#f9454b', '#f1d787', '#16a184', '#5a91fe'];
 
     const initCanvas = () => {
-        // 캔버스 초기화
-        canvasRef.current.width = window.innerWidth;
-        canvasRef.current.height = window.innerHeight;
+        resizeCanvas();
 
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
+
         const shapeCount = 6 + Math.floor(canvas.width / 300);
 
         const randomSpeed = (speed = 1) => {
@@ -47,6 +53,14 @@ export const Layout = ({ title, description = '테스트 디스크립션', child
             draw(canvas, ctx);
         }, 1000 / 16);
     }
+
+    const resizeCanvas = () => {
+        const canvas = canvasRef.current
+        if (canvas) {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+    };
 
     const draw = (canvas, ctx) => {
         if (canvas && ctx) {
@@ -82,37 +96,35 @@ export const Layout = ({ title, description = '테스트 디스크립션', child
 
     useEffect(() => {
         initCanvas();
-        // 중복 렌더링 방지
-        setTimeout(() => {
-            setIsMount(true);
-        }, 350);
     }, []);
 
     useEffect(() => {
         // 리사이즈시 재 렌더링
-        if (isMount) initCanvas();
+        resizeCanvas();
     }, [width]);
 
     return (
         <>
             <Head>
-                <meta name="description" content={description} />
-                <meta charSet="utf-8" />
-                <meta property="og:title" content={title} key="ogtitle" />
-                <meta property="og:description" content={description} key="ogdesc" />
+                <meta name="description" content={description}/>
+                <meta charSet="utf-8"/>
+                <meta property="og:title" content={title}/>
+                <meta property="og:description" content={description}/>
+                <meta property="og:image" content="/cover.jpg"/>
 
-                <meta name="twitter:card" content="summary" key="twcard" />
-                <meta name="twitter:creator" content="@argentinux" key="twhandle" />
+                <meta name="twitter:card" content="summary"/>
+                <meta name="twitter:creator" content="@argentinux"/>
+                <meta name="robots" content="noindex"/>
 
                 <title>{title}</title>
             </Head>
             <div className="relative w-full h-full">
-                <canvas ref={canvasRef} className="absolute w-full h-full"></canvas>
-                <div className="absolute flex justify-center w-full h-full px-3 overflow-y-scroll">
-                    <div className="relative w-full max-w-[1080px]">
+                <canvas ref={canvasRef} className="absolute w-full h-full z-0"></canvas>
+                <div className="absolute flex justify-center w-full h-full px-3 overflow-y-scroll z-10">
+                    <div className="relative w-full max-w-[1080px] h-full">
                         <main
-                            className="flex flex-col min-h-full backdrop-blur-[10px] bg-white bg-opacity-[85%] border-x border-gray-300/90 px-[80px] py-[64px] gap-y-[68px]
-                                max-sm:p-[24px_16px] max-lg:p-[32px_28px] max-lg:gap-y-[48px]"
+                            className="flex flex-col backdrop-blur-[10px] bg-white bg-opacity-[85%] border-x border-gray-300/90 px-[80px] py-[64px] gap-y-[68px]
+                            max-sm:p-[24px_16px] max-lg:p-[32px_28px] max-lg:gap-y-[48px]"
                         >
                             {children}
                         </main>
