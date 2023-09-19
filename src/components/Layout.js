@@ -10,7 +10,7 @@ import {useWindowResize} from '@/hooks/useWindowResize';
  * @param description - 페이지 설명
  * @param {React.ReactNode} children - 하위 노드
  * */
-export const Layout = ({ title, description = '테스트 디스크립션', children }) => {
+export const Layout = ({ title, description = '안녕하세요, 전제룡입니다.', children }) => {
     const canvasRef = useRef(null);
     const [width] = useWindowResize();
 
@@ -106,15 +106,17 @@ export const Layout = ({ title, description = '테스트 디스크립션', child
     return (
         <>
             <Head>
-                <meta name="description" content={description}/>
                 <meta charSet="utf-8"/>
+                <meta name="robots" content="noindex"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <meta name="description" content={description}/>
+
                 <meta property="og:title" content={title}/>
                 <meta property="og:description" content={description}/>
                 <meta property="og:image" content="/cover.jpg"/>
 
                 <meta name="twitter:card" content="summary"/>
                 <meta name="twitter:creator" content="@argentinux"/>
-                <meta name="robots" content="noindex"/>
 
                 <title>{title}</title>
             </Head>

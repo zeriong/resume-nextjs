@@ -8,7 +8,7 @@ import gitSymbolSvg from '@/assets/images/git-symbol.svg';
 
 export default function Home() {
     return (
-        <Layout title="기술 이력서 - 전제룡">
+        <Layout title="기술 이력서 - 전제룡" description="소통과 배려, 공감을 통해 팀과 함께 성장하며 가치있는 비즈니스를 실현할 수 있는 준비된 인재가 되기위해 노력하고 있습니다.">
 
             {/* intro title */}
             <section>
