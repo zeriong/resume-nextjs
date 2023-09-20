@@ -1,6 +1,6 @@
 import {Layout} from '@/components/Layout';
 import Image from 'next/image'
-import profilePng from '/public/cover.jpg';
+import profilePng from '../assets/images/profile.jpg';
 import {Category} from '@/components/Category';
 import {ExperiencedProject} from '@/components/ExperiencedProject';
 import {ExperiencedProjectDetail} from '@/components/ExperiencedProjectDetail';
