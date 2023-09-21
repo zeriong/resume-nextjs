@@ -62,7 +62,9 @@ export default function Home() {
             <Category
                 name="Dev Experience"
                 comment="총 1년 4개월"
-                description="아래 프로젝트는 학습을 위해 진행한 개인 프로젝트와 사이드 프로젝트 참여 결과물로 이루어져 있습니다."
+                description={<>아래 프로젝트는 학습을 위해 진행한 개인 프로젝트와 사이드 프로젝트 참여 결과물로 이루어져 있습니다.<br/>
+                <span className="text-gray-500 text-base font-light">(주도적인 학습으로 프론트, 백엔드, 배포 등의 개발 경험을 거치며 웹 서비스의 설계와 개발에 대한 전체적인 이해도를 높이려 노력하였습니다.)</span>
+                </>}
             >
                 <div className="flex flex-col mt-[52px] gap-y-[44px]">
 
