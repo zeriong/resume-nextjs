@@ -9,6 +9,7 @@ import gitSymbolSvg from "@/assets/images/git-symbol.svg";
  * @param linkDemo - 데모 사이트 링크
  * @param linkGithub - 깃허브 링크
  * @param description - 프로젝트 설명
+ * @param preview - 프로젝트 프리뷰 이미지
  * @param devPart - 프로젝트 담당 파트
  * @param devDateRange - 프로젝트 진행 기간 범위 (예: 2020.09 ~ 2020.09)
  * @param devPeriod - 프로젝트 진행 시간 (예: 1개월)
@@ -21,6 +22,7 @@ export const ExperiencedProject = (
         linkDemo,
         linkGithub,
         description,
+        preview,
         devPart,
         devDateRange,
         devPeriod,
@@ -48,7 +50,7 @@ export const ExperiencedProject = (
                     <a href={linkGithub}
                        target="_blank"
                        className="flex items-center min-w-[40px] h-[22px] text-sm text-white bg-gray-600/90 rounded-full pl-1.5 pr-2">
-                        <Image src={gitSymbolSvg} className="w-[16px]" alt='git'/>
+                        <Image src={gitSymbolSvg} className="w-[16px]" git="git"/>
                         <i className="arrow-right !border-white ml-0.5"></i>
                     </a>
                 )}
@@ -58,6 +60,11 @@ export const ExperiencedProject = (
             </p>
             <div className="flex gap-x-[52px] gap-y-[28px] mt-[32px] max-md:flex-col max-md:mt-[8px]">
                 <div className="flex flex-col min-w-[150px] gap-y-1 pt-1">
+                    {preview && (
+                        <div className="relative w-[150px] h-[150px] ring-1 ring-gray-300 rounded-md overflow-hidden mb-2">
+                            <Image src={preview} alt="preview"></Image>
+                        </div>
+                    )}
                     {devPart && (
                         <p className="text-gray-600">{devPart}</p>
                     )}

@@ -1,10 +1,18 @@
-import {Layout} from '@/components/Layout';
 import Image from 'next/image'
+
 import profilePng from '../assets/images/profile.jpg';
-import {Category} from '@/components/Category';
-import {ExperiencedProject} from '@/components/ExperiencedProject';
-import {ExperiencedProjectDetail} from '@/components/ExperiencedProjectDetail';
-import gitSymbolSvg from '@/assets/images/git-symbol.svg';
+import gitSymbolSvg from '../assets/images/git-symbol.svg';
+import {Layout} from "@/components/Layout";
+import {Category} from "@/components/Category";
+import {ExperiencedProject} from "@/components/ExperiencedProject";
+import {ExperiencedProjectDetail} from "@/components/ExperiencedProjectDetail";
+
+import preview01 from '../assets/preview/preview01.jpg';
+import preview02 from '../assets/preview/preview02.jpg';
+import preview03 from '../assets/preview/preview03.jpg';
+import preview04 from '../assets/preview/preview04.jpg';
+import preview05 from '../assets/preview/preview05.jpg';
+import preview06 from '../assets/preview/preview06.jpg';
 
 export default function Home() {
     return (
@@ -58,12 +66,12 @@ export default function Home() {
                 </p>
             </section>
 
-            {/* Dev Experience */}
+            {/* Projects */}
             <Category
-                name="Dev Experience"
+                name="Projects"
                 comment="총 1년 4개월"
-                description={<>아래 프로젝트는 학습을 위해 진행한 개인 프로젝트와 사이드 프로젝트 참여 결과물로 이루어져 있습니다.<br/>
-                <span className="text-gray-500 text-base font-light">(주도적인 학습으로 프론트, 백엔드, 배포 등의 개발 경험을 거치며 웹 서비스의 설계와 개발에 대한 전체적인 이해도를 높이려 노력하였습니다.)</span>
+                description={<>아래 프로젝트는 학습을 위해 진행한 개인 프로젝트와 사이드 프로젝트 팀 참여 결과물로 이루어져 있습니다.<br/>
+                    <span className="text-gray-500 text-base font-light">(주도적인 학습으로 프론트, 백엔드, 배포 등의 개발 경험을 거치며 웹 서비스의 설계와 개발에 대한 전체적인 이해도를 높이려 노력하였습니다.)</span>
                 </>}
             >
                 <div className="flex flex-col mt-[52px] gap-y-[44px]">
@@ -73,6 +81,7 @@ export default function Home() {
                         isPrivate={true}
                         linkDemo="https://zete.zeriong.com/?type=demo&modal=sign-in"
                         description="사용성을 극대화 하여 편리한 메모 기능과, AI(Chat GPT) 를 연동하여 검색 결과를 메모에 요약 반영 시킬 수 있는 서비스입니다."
+                        preview={preview01}
                         devPart={<>Frontend/Backend<br/>Engineer</>}
                         devDateRange="2023.03 ~ 2023.09"
                         devPeriod="6개월"
@@ -124,6 +133,7 @@ export default function Home() {
                         linkGithub="https://github.com/zeriong/side-project"
                         description="유튜브 영상의 내용을 텍스트로 요약해 주는 서비스를 개발하는 6인 규모의 사이드 프로젝트 팀에 참여하여 서비스 영역의 프론트엔드 개발을 담당하였고
                             PL의 동의하에 본인이 개발한 파트만 분리하여 게재하였습니다."
+                        preview={preview02}
                         devPart="Frontend Engineer"
                         devDateRange="2023.03 ~ 2023.04"
                         devPeriod="1개월"
@@ -131,7 +141,7 @@ export default function Home() {
                         <ExperiencedProjectDetail
                             devList={[
                                 'NextJS를 활용한 기본적인 SSR 구조 개발',
-                                'Figma로 작성된 디자인 시안에 따라 서비스 영역 UI 구현',
+                                'Figma로 작성된 디자인 시안에 따라 서비스 영역 개발',
                                 'Youtube api를 통하여 영상의 세부정보 연동',
                                 'React Slick 라이브러리를 사용하여 컨텐츠 슬라이더 구현',
                                 'Youtube ProgressBar 와 동기화된 Custom ProgressBar를 구현하고 챕터 단위 인터페이스와 재생을 지원하고 챕터의 변화에 따라 슬라이더의 동적인 애니메이션 구현',
@@ -140,7 +150,10 @@ export default function Home() {
                                 { title: 'Review', content: <>
                                         프로젝트 초기에 과한 열정으로 일정 대비 너무 많은 작업량을 맡거나 문제를 혼자서만 해결하려 하다 팀 일정에 차질을 준 경험이 있었습니다.<br/>
                                         <br/>
-                                        이때 커뮤니케이션의 중요성과 함께 일을 한다는 의미를 좀 더 깊게 깨닫게 되었고, 상황과 생각을 공유하고 보완하는 자세로 임하려 노력하고 있습니다.
+                                        이때 커뮤니케이션의 중요성과 함께 일을 한다는 의미를 좀 더 깊게 깨닫게 되었고, 상황과 생각을 공유하고 보완하는 자세로 임하려 노력하고 있습니다.<br/>
+                                        <br/>
+                                        주요 기획에 해당하는 유튜브 플레이어 커스텀에 대한 저작권 문제의 여지를 파악하여 검증된 자료를 찾아
+                                        공유하고 기술적으로 해결할 수 있는 더 나은 수단들을 제안하여 프로젝트 방향성에 크게 기여하였습니다.
                                     </>
                                 },
                                 { title: 'Collaboration Tools', content: 'Google Meet, Google Chat, Google Docs, Notion, Figma, Zeplin' },
@@ -158,6 +171,7 @@ export default function Home() {
                         linkDemo="https://layout-gallery-beryl.vercel.app/"
                         linkGithub="https://github.com/zeriong/layout-gallery"
                         description="레이아웃, UI 개발 역량 향상을 위한 프로젝트로 Figma 디자인 시안을 바탕으로 개발된 페이지가 모인 갤러리입니다."
+                        preview={preview03}
                         devPart="Frontend Engineer"
                         devDateRange="2023.02 ~ 2023.03"
                         devPeriod="1개월"
@@ -178,6 +192,7 @@ export default function Home() {
                         title="회원가입, 로그인 서비스"
                         isPrivate={true}
                         description="NestJS를 활용해 백엔드 개발을 경험하고 회원가입, 로그인, 회원수정, 탈퇴 등의 기능 개발을 통해 기본적인 서비스 개발 구조를 이해하기 위한 프로젝트입니다."
+                        preview={preview06}
                         devPart={<>Frontend/Backend<br/>Engineer</>}
                         devDateRange="2022.12 ~ 2023.03"
                         devPeriod="3개월"
@@ -222,6 +237,7 @@ export default function Home() {
                         title="노마드코더 강의 코스"
                         isPrivate={true}
                         description="개인적으로 진행하던 학습 방식에서 한계를 느껴 시작하게 된 노마드코더의 기초 강의 학습 목록과 결과물입니다."
+                        preview={preview04}
                         devDateRange="2022.10 ~ 2022.12"
                         devPeriod="2개월"
                     >
@@ -262,7 +278,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                     <ul className="mt-0.5">
-                                       <li>{item.description} </li>
+                                        <li>{item.description} </li>
                                     </ul>
                                 </div>
                             ))}
@@ -273,6 +289,7 @@ export default function Home() {
                         title="웹개발 기초 학습"
                         isPrivate={true}
                         description="개발에 관심을 가지고 시작하였던 기초 학습 과정입니다. 학습 과정에서 복잡한 코드를 통해 시각적인 결과가 만들어지는 개발에 재미를 느꼈고 목표와 진로를 결정하게 된 중요한 계기가 되었습니다."
+                        preview={preview05}
                         devDateRange="2022.06 ~ 2023.10"
                         devPeriod="4개월"
                     >
