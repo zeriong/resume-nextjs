@@ -292,7 +292,7 @@ export default function Home() {
                         isPrivate={true}
                         description="개발에 관심을 가지고 시작하였던 기초 학습 과정입니다. 학습 과정에서 복잡한 코드를 통해 시각적인 결과가 만들어지는 개발에 재미를 느꼈고 목표와 진로를 결정하게 된 중요한 계기가 되었습니다."
                         preview={preview05}
-                        devDateRange="2022.06 ~ 2023.10"
+                        devDateRange="2022.06 ~ 2022.10"
                         devPeriod="4개월"
                     >
                         <div className="flex flex-col gap-y-3">
