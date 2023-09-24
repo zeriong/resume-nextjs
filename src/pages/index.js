@@ -77,7 +77,7 @@ export default function Home() {
                 <div className="flex flex-col mt-[52px] gap-y-[44px]">
 
                     <ExperiencedProject
-                        title="ZETE 메모서비스"
+                        title="ZETE AI 메모서비스"
                         isPrivate={true}
                         linkDemo="https://zete.zeriong.com/?type=demo&modal=sign-in"
                         description="사용성을 극대화 하여 편리한 메모 기능과, AI(Chat GPT) 를 연동하여 검색 결과를 메모에 요약 반영 시킬 수 있는 서비스입니다."
@@ -102,7 +102,7 @@ export default function Home() {
                         />
 
                         <ExperiencedProjectDetail
-                            title="메모서비스 기획 및 기능 개발"
+                            title="AI 메모서비스 기획 및 기능 개발"
                             linkGithub="https://github.com/zeriong/zete"
                             devDateRange="2023.03 ~ 2023.08"
                             devList={[
@@ -302,7 +302,7 @@ export default function Home() {
                                     description: "그간 학습한 내용을 바탕으로 다양한 유형의 반응형 사이트에 대한 레이아웃 및 UI에 대한 클론 코딩을 진행하였습니다.",
                                     git: 'https://github.com/zeriong/learning-start/tree/main/03.clone',
                                     list: [
-                                        { title: "clone_nhn", description: "NHN Cloud의 랜딩 페이지의 클론 코딩하여 반응형 레이아웃과 UI 요소 개발 학습" },
+                                        { title: "clone_nhn", description: "NHN Cloud의 랜딩 페이지를 클론 코딩하여 반응형 레이아웃과 UI 요소 개발 학습" },
                                         { title: "clone_discord", description: "Discord 대시보드 페이지를 클론 코딩하여 레이아웃과 UI 요소 개발 학습" },
                                         { title: "clone_partner", description: "반응형 랜딩 페이지 개발을 통해 영상삽입, 라이브러리 사용, 인터랙션 구현 등 학습" },
                                     ]
