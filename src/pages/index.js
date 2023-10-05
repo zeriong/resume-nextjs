@@ -107,7 +107,7 @@ export default function Home() {
                             devDateRange="2023.03 ~ 2023.08"
                             devList={[
                                 '기존 사용하던 메모 서비스를 벤치하여 발전시키고 AI를 접목시켜 서비스 기획',
-                                'Nestjs와 MariaDB를 기반으로 백엔드 설계 및 기능 개발',
+                                'NestJS와 MariaDB를 기반으로 백엔드 설계 및 기능 개발',
                                 'React를 기반으로 프론트엔드의 메모, 카테고리, 태그에 대한 CRUD 인터페이스 개발',
                                 'Openai ChatGpt3.5 를 연동하여 채팅형식의 정보 검색과 요약 메모기능 개발',
                                 <>Openapi Generator 의 templates 기능을 통해 axios 통신 타입 파일을 커스텀하여 생성<span className="text-gray-400 ml-0.5">(생산성 증가)</span></>
@@ -117,7 +117,7 @@ export default function Home() {
                                     title: 'Used Stack',
                                     content: (
                                         <>
-                                            TypeScript, Nestjs, TypeORM, JWT Token, Swagger, MariaDB,<br/>
+                                            TypeScript, NestJS, TypeORM, JWT, Swagger, MariaDB,<br/>
                                             React, Redux Toolkit, Openapi Generator, Tailwind CSS
                                         </>
                                     )
@@ -162,7 +162,7 @@ export default function Home() {
                                 { title: 'Used Stack', content: 'NextJS, React, Firebase, Redux Toolkit, Tailwind CSS' }
                             ]}
                             review="머머머를 느꼈다."
-                            usedStack="Nextjs, React, Firebase Store"
+                            usedStack="NextJS, React, Firebase Store"
                         />
 
                     </ExperiencedProject>
@@ -373,7 +373,7 @@ export default function Home() {
                             <p className="text-gray-500 text-xl font-semibold leading-none">Frontend</p>
                         </div>
                         <div className="">
-                            HTML/CSS, JavaScript, TypeScript, React, Redux Toolkit, React Query, Next.js,
+                            HTML/CSS, JavaScript, TypeScript, React, Redux Toolkit, React Query, NextJS,
                             Tailwindcss
                         </div>
                     </div>
@@ -382,7 +382,7 @@ export default function Home() {
                             <p className="text-gray-500 text-xl font-semibold leading-none">Backend</p>
                         </div>
                         <div className="flex flex-col gap-y-[44px]">
-                            Nodejs, Nestjs, Typeorm, JWT, Swagger, Mariadb
+                            NodeJS, NestJS, Typeorm, JWT, Swagger, Mariadb
                         </div>
                     </div>
                     <div className="flex gap-x-[52px] gap-y-[20px] max-md:flex-col">
