@@ -34,7 +34,7 @@ export const Layout = ({ title, description = '안녕하세요, 전제룡입니�
             <div className="relative w-full h-full">
 
                 {/* Circle Animate Component */}
-                <CircleAnimate/>
+                {/*<CircleAnimate/>*/}
 
                 <div className="absolute flex justify-center w-full h-full px-3 overflow-y-scroll z-10">
                     <div className="relative w-full max-w-[1080px] h-full">
