@@ -61,7 +61,6 @@ export default function IntroSection() {
             />
           </div>
         </div>
-
         {/* Contacts */}
         <div className="text-base text-gray-500 leading-[1.4] py-2 max-sm:mt-[20px] flex flex-col gap-6">
           {LINK_LIST.map((item) => (
@@ -73,22 +72,39 @@ export default function IntroSection() {
       {/* intro my self */}
       <section className="flex flex-col text-xl text-gray-700 leading-[1.8] gap-y-[24px] max-md:text-base">
         <p>
-          빠른 이터레이션이 요구되는 환경 속에서 개발하기 좋은 환경을 만들어
-          작업일정 내에 UX기반의 높은 완성도로 마무리하는 것을 개발자의 주요
-          역량이라 믿으며 실천해왔으며, 사용자 입장에서 고민하며 설계하고, 이어지는
-          불필요한 개발적 요소를 최소화하고, 문제의 본질을 정확히 파악하여 가장
-          단순하면서도 효과적인 해법을 찾는 데 집중합니다.
+          빠른 이터레이션이 요구되는 환경 속에서 개발하기 좋은 환경을 만들어{" "}
+          <span className={"text-primary font-semibold"}>
+            작업일정 내에 UX기반의 높은 완성도로 마무리하는 것
+          </span>
+          을 개발자의 주요 역량이라 믿으며 실천해왔습니다. 사용자 입장에서 고민하고
+          설계하며 이어지는 불필요한 개발적 요소를 최소화하고 문제의 본질을 정확히
+          파악하여 가장{" "}
+          <span className={"text-primary font-semibold"}>
+            단순하면서도 본질적인 해법을 찾는 데 집중
+          </span>
+          합니다.
         </p>
         <p>
-          프론트엔드 개발자로 커리어를 시작했지만, 다양한 분야를 경험하며 기술적
-          시야를 넓히는 것 또한 중요한 역량이라고 생각하며 프론트엔드뿐만 아닌 서버,
-          인프라, DevOps 등 여러 영역에서 경험을 쌓으며 프로세스 전반에 대한 이해와
-          문제 추론 능력을 향상시켜왔습니다.
+          프론트엔드 개발자로 커리어를 시작했지만, 다양한 분야를 경험하며{" "}
+          <span className={"text-primary font-semibold"}>
+            기술적 시야를 넓히는 것
+          </span>{" "}
+          또한 중요한 역량이라고 생각하며 프론트엔드뿐만 아닌 서버, 인프라, DevOps
+          등 여러 영역에서 경험을 쌓으며{" "}
+          <span className={"text-primary font-semibold"}>
+            프로세스 전반에 대한 이해와 문제 추론 능력
+          </span>
+          을 향상시켜왔습니다.
         </p>
         <p>
-          공식 문서 기반의 학습과 아키텍처 설계를 바탕으로 확장성과 유지보수성이
-          높은 클린 코드를 작성하기 위해 노력하며 팀의 생산성을 높이기 위해 동료와
-          컨벤션을 고민하며, 이해와 설득이 가능한 근거가 녹아든 코드를 지향합니다.
+          공식 문서 기반의 학습과 아키텍처 설계를 바탕으로{" "}
+          <span className={"text-primary font-semibold"}>
+            확장성과 유지보수성이 높은 클린 코드
+          </span>
+          를 작성하기 위해 노력하며 팀의 생산성을 높이기 위해 동료와 컨벤션을
+          고민하며, 이해와 설득이 가능한{" "}
+          <span className={"text-primary font-semibold"}>근거가 녹아든 코드</span>를
+          지향합니다.
         </p>
         <p>
           밝은 에너지와 친화력, 공감 및 소통 능력으로 경직된 분위기를 순환시키고
