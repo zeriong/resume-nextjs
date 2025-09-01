@@ -27,7 +27,7 @@ export const Layout = ({
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="/cover.jpg" />
+        <meta property="og:image" content="/cover.jpg?v=1" />
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:creator" content="@argentinux" />
