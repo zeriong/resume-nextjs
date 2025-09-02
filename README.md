@@ -7,4 +7,4 @@
 
 <br>
 
-👉 [포트폴리오 바로가기](https://your-portfolio-link.com)
+👉 [포트폴리오 바로가기](https://portfolio.zeriong.com/)
