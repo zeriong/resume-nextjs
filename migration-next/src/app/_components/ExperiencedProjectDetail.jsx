@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import gitSymbolSvg from "@/assets/images/git-symbol.svg";
+import gitSymbolSvg from "@/assets/svg/git-symbol.svg";
 
 /**
  * @typedef {Object} addField

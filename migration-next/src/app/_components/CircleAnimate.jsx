@@ -1,5 +1,7 @@
+"use client";
+
 import {useEffect, useRef} from "react";
-import {useWindowResize} from "@/hooks/useWindowResize";
+import {useWindowResize} from "@/app/_hooks/useWindowResize";
 
 export default function CircleAnimate() {
     const COLOR = [ '#f9454b', '#f1d787', '#16a184', '#5a91fe'];

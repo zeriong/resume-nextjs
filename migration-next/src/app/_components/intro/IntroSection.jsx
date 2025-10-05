@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import profilePng from "@/assets/images/profile.jpg";
-import LinkList from "@/components/intro/LinkList";
+import LinkList from "@/app/_components/intro/LinkList";
 
 export default function IntroSection() {
   const LINK_LIST = [

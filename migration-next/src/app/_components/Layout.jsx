@@ -1,7 +1,9 @@
+"use client";
+
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
-import { useWindowResize } from "@/hooks/useWindowResize";
-import CircleAnimate from "@/components/CircleAnimate";
+import { useWindowResize } from "@/app/_hooks/useWindowResize";
+import CircleAnimate from "@/app/_components/CircleAnimate";
 import { twMerge } from "tailwind-merge";
 
 /**

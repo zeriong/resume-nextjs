@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import gitSymbolSvg from "@/assets/images/git-symbol.svg";
+import gitSymbolSvg from "@/assets/svg/git-symbol.svg";
 
 /**
  * Experienced 카테고리 내에 프로젝트 정보 컴포넌트

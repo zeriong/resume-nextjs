@@ -1,19 +1,17 @@
+"use client";
+
 import Image from "next/image";
-
-import profilePng from "../../migration-next/src/assets/images/profile.jpg";
-import gitSymbolSvg from "../../migration-next/src/assets/images/git-symbol.svg";
-import { Layout } from "../../migration-next/src/app/_components/Layout";
-import { Category } from "../../migration-next/src/app/_components/Category";
-import { ExperiencedProject } from "../../migration-next/src/app/_components/ExperiencedProject";
-import { ExperiencedProjectDetail } from "../../migration-next/src/app/_components/ExperiencedProjectDetail";
-
-import preview01 from "../../migration-next/src/assets/images/preview/preview01.jpg";
-import preview02 from "../../migration-next/src/assets/images/preview/preview02.jpg";
-import preview03 from "../../migration-next/src/assets/images/preview/preview03.jpg";
-import preview04 from "../../migration-next/src/assets/images/preview/preview04.jpg";
-import preview05 from "../../migration-next/src/assets/images/preview/preview05.jpg";
-import preview06 from "../../migration-next/src/assets/images/preview/preview06.jpg";
-import IntroSection from "../../migration-next/src/app/_components/intro/IntroSection";
+import IntroSection from "@/app/_components/intro/IntroSection";
+import { Category } from "@/app/_components/Category";
+import { ExperiencedProject } from "@/app/_components/ExperiencedProject";
+import preview01 from "@/assets/images/preview/preview01.jpg";
+import { ExperiencedProjectDetail } from "@/app/_components/ExperiencedProjectDetail";
+import preview02 from "@/assets/images/preview/preview02.jpg";
+import preview03 from "@/assets/images/preview/preview03.jpg";
+import preview06 from "@/assets/images/preview/preview06.jpg";
+import preview04 from "@/assets/images/preview/preview04.jpg";
+import preview05 from "@/assets/images/preview/preview05.jpg";
+import { Layout } from "@/app/_components/Layout";
 
 export default function Home() {
   return (
