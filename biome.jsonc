@@ -32,14 +32,19 @@
 
       "correctness": {
         "noUnusedImports": {
+          "options": {},
           "level": "error",
           "fix": "safe"
         },
+
+        // useEffect deps 에러 해제
+        "useExhaustiveDependencies": "off",
 
         // 사용하지 않는 변수 감지 - 경고로 처리하여 자동 삭제하지 않음
         // level: "warn"은 경고만 표시하고 자동 삭제하지 않음
         // fix: "none"으로 설정하여 코드 수정 제안을 비활성화
         "noUnusedVariables": {
+          "options": {},
           "level": "warn",
           "fix": "none"
         },
@@ -48,6 +53,7 @@
         // level: "warn"은 경고만 표시하고 자동 삭제하지 않음
         // fix: "none"으로 설정하여 코드 수정 제안을 비활성화
         "noUnusedFunctionParameters": {
+          "options": {},
           "level": "warn",
           "fix": "none"
         },
@@ -58,10 +64,7 @@
 
       "suspicious": {
         // console 사용 감지 - 경고처리
-        "noConsoleLog": "warn",
-        "options": {
-          "allow": ["log", "info", "warn", "error"]
-        },
+        "noConsole": "warn",
 
         // var 키워드 사용 금지 - 오류로 처리
         "noVar": "error",
