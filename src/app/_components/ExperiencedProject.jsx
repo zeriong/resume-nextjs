@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import gitSymbolSvg from "@/assets/svg/git-symbol.svg";
+import GitSymbolSvg from "@/assets/svg/git-symbol.svg";
 
 /**
  * Experienced 카테고리 내에 프로젝트 정보 컴포넌트
@@ -47,7 +47,7 @@ export const ExperiencedProject = ({
             target="_blank"
             className="flex items-center min-w-[40px] h-[22px] text-sm text-white bg-gray-600/90 rounded-full pl-1.5 pr-2"
           >
-            <Image src={gitSymbolSvg} className="w-[16px]" alt="git" />
+            <GitSymbolSvg className="w-[16px]" alt="git" />
             <i className="arrow-right !border-white ml-0.5"></i>
           </a>
         )}

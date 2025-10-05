@@ -91,8 +91,8 @@ export default function IntroSection() {
           <span className={"text-primary font-semibold"}>
             기술적 시야를 넓히는 것
           </span>{" "}
-          또한 중요한 역량이라고 생각하며 프론트엔드뿐만 아닌 서버, 인프라, DevOps
-          등 여러 영역에서 경험을 쌓으며{" "}
+          또한 중요한 역량이라고 생각하며 프론트엔드뿐만 아닌 서버, 인프라, DevOps 등
+          여러 영역에서 경험을 쌓으며{" "}
           <span className={"text-primary font-semibold"}>
             프로세스 전반에 대한 이해와 문제 추론 능력
           </span>
@@ -109,8 +109,8 @@ export default function IntroSection() {
           지향합니다.
         </p>
         <p>
-          밝은 에너지와 친화력, 공감 및 소통 능력으로 경직된 분위기를 순환시키고
-          함께 목표에 집중 할 수 있는 분위기를 이끌어 내는 강점을 가지고 있습니다.
+          밝은 에너지와 친화력, 공감 및 소통 능력으로 경직된 분위기를 순환시키고 함께
+          목표에 집중 할 수 있는 분위기를 이끌어 내는 강점을 가지고 있습니다.
         </p>
       </section>
     </>
