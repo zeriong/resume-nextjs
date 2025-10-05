@@ -31,10 +31,12 @@
       "recommended": true,
 
       "correctness": {
+        // 사용하지 않는 임포트문 포맷 세팅
         "noUnusedImports": {
           "options": {},
           "level": "error",
-          "fix": "safe"
+          // 임포트문 삭제하지 않음 ( safe 시 삭제 )
+          "fix": "none"
         },
 
         // useEffect deps 에러 해제
