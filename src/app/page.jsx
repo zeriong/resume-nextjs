@@ -1,10 +1,10 @@
 "use client";
 
-import { Category } from "@/app/_components/Category";
-import { ExperiencedProject } from "@/app/_components/ExperiencedProject";
-import { ExperiencedProjectDetail } from "@/app/_components/ExperiencedProjectDetail";
+import { Category } from "@/app/_components/common/Category";
+import { ExperiencedProject } from "@/app/_components/expericed/ExperiencedProject";
+import { ExperiencedProjectDetail } from "@/app/_components/expericed/ExperiencedProjectDetail";
 import IntroSection from "@/app/_components/intro/IntroSection";
-import { Layout } from "@/app/_components/Layout";
+import { Layout } from "@/app/_components/common/Layout";
 import preview01 from "@/assets/images/preview/preview01.jpg";
 import preview02 from "@/assets/images/preview/preview02.jpg";
 import preview03 from "@/assets/images/preview/preview03.jpg";
@@ -66,8 +66,8 @@ export default function Home() {
                 "React를 기반으로 프론트엔드의 메모, 카테고리, 태그에 대한 CRUD 인터페이스 개발",
                 "Openai ChatGpt3.5 를 연동하여 채팅형식의 정보 검색과 요약 메모기능 개발",
                 <>
-                  Openapi Generator 의 templates 기능을 통해 axios 통신 타입 파일을
-                  커스텀하여 생성
+                  Openapi Generator 의 templates 기능을 통해 axios 통신 타입
+                  파일을 커스텀하여 생성
                   <span className="text-gray-400 ml-0.5">(생산성 증가)</span>
                 </>,
               ]}
@@ -116,17 +116,17 @@ export default function Home() {
                       문제를 겪은적이 있습니다.
                       <br />
                       <br />
-                      이때 커뮤니케이션의 중요성과 함께 일을 한다는 의미를 좀 더 깊게
-                      깨닫게 되었고, 적극적인 소통을 통해 작업을 분배하고 실현 가능한
-                      일정을 계획하여 팀 작업 일정을 앞당겨 문제를 개선한 경험이
-                      있습니다. 이후로 상황과 생각을 공유하고 보완하는 자세로 임하려
-                      노력하고 있습니다.
+                      이때 커뮤니케이션의 중요성과 함께 일을 한다는 의미를 좀 더
+                      깊게 깨닫게 되었고, 적극적인 소통을 통해 작업을 분배하고
+                      실현 가능한 일정을 계획하여 팀 작업 일정을 앞당겨 문제를
+                      개선한 경험이 있습니다. 이후로 상황과 생각을 공유하고
+                      보완하는 자세로 임하려 노력하고 있습니다.
                       <br />
                       <br />
-                      또한, 주요 기획에 해당하는 유튜브 플레이어 커스텀에 대한 저작권
-                      문제의 여지를 파악하여 검증된 자료를 찾아 공유하고 기술적으로
-                      해결할 수 있는 더 나은 수단들을 제안하여 프로젝트 방향성에 크게
-                      기여하였습니다.
+                      또한, 주요 기획에 해당하는 유튜브 플레이어 커스텀에 대한
+                      저작권 문제의 여지를 파악하여 검증된 자료를 찾아 공유하고
+                      기술적으로 해결할 수 있는 더 나은 수단들을 제안하여
+                      프로젝트 방향성에 크게 기여하였습니다.
                     </>
                   ),
                 },
@@ -137,7 +137,8 @@ export default function Home() {
                 },
                 {
                   title: "Used Stack",
-                  content: "NextJS, React, Firebase, Redux Toolkit, Tailwind CSS",
+                  content:
+                    "NextJS, React, Firebase, Redux Toolkit, Tailwind CSS",
                 },
               ]}
               review="머머머를 느꼈다."
@@ -299,7 +300,9 @@ export default function Home() {
                   <div className="flex items-start gap-x-1">
                     <div className="flex items-start gap-x-1 max-sm:flex-col">
                       <p className="font-semibold">{item.title}</p>
-                      <p className="text-gray-600 max-sm:text-sm">{item.stack}</p>
+                      <p className="text-gray-600 max-sm:text-sm">
+                        {item.stack}
+                      </p>
                     </div>
                     <div className="flex items-center pt-0.5 gap-x-1">
                       {item.demo && (
@@ -428,8 +431,12 @@ export default function Home() {
                   <div className="flex flex-col border-l border-gray-300/90 mt-4 pl-4 gap-y-2 max-md:pl-4">
                     {chapter.list.map((item, idx2) => (
                       <div key={idx2}>
-                        <p className="text-gray-700 font-semibold">{item.title}</p>
-                        <p className="text-sm text-gray-600">{item.description}</p>
+                        <p className="text-gray-700 font-semibold">
+                          {item.title}
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          {item.description}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -447,8 +454,8 @@ export default function Home() {
           <>
             프로젝트에 사용 경험이 있는 기술들입니다.{" "}
             <span className="border-b-2 border-blue-500">React</span>를 주력으로
-            서비스에 필요한 전반적인 과정을 경험하고 문제를 해결하며 이해하고 성장하는
-            데 중점을 두었습니다. 백엔드에서는{" "}
+            서비스에 필요한 전반적인 과정을 경험하고 문제를 해결하며 이해하고
+            성장하는 데 중점을 두었습니다. 백엔드에서는{" "}
             <span className="border-b-2 border-blue-500">NestJS</span> 사용에
             익숙합니다.
           </>
@@ -462,8 +469,8 @@ export default function Home() {
               </p>
             </div>
             <div className="">
-              HTML/CSS, JavaScript, TypeScript, React, Redux Toolkit, React Query,
-              NextJS, Tailwindcss
+              HTML/CSS, JavaScript, TypeScript, React, Redux Toolkit, React
+              Query, NextJS, Tailwindcss
             </div>
           </div>
           <div className="flex gap-x-[52px] gap-y-[20px] max-md:flex-col">
@@ -478,7 +485,9 @@ export default function Home() {
           </div>
           <div className="flex gap-x-[52px] gap-y-[20px] max-md:flex-col">
             <div className="flex flex-col w-[130px]">
-              <p className="text-gray-500 text-xl font-semibold leading-none">Etc</p>
+              <p className="text-gray-500 text-xl font-semibold leading-none">
+                Etc
+              </p>
             </div>
             <div className="flex flex-col gap-y-[44px]">
               Firebase, Openapi Generator, Linux Ubuntu, PM2,
