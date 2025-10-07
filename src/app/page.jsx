@@ -1,8 +1,8 @@
 "use client";
 
 import { Category } from "@/app/_components/common/Category";
-import { ExperiencedProject } from "@/app/_components/expericed/ExperiencedProject";
-import { ExperiencedProjectDetail } from "@/app/_components/expericed/ExperiencedProjectDetail";
+import { ExperiencedProject } from "@/app/_components/experienced/ExperiencedProject";
+import { ExperiencedProjectDetail } from "@/app/_components/experienced/ExperiencedProjectDetail";
 import IntroSection from "@/app/_components/intro/IntroSection";
 import { Layout } from "@/app/_components/common/Layout";
 import preview01 from "@/assets/images/preview/preview01.jpg";
