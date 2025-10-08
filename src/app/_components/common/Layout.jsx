@@ -8,9 +8,6 @@ import { twMerge } from "tailwind-merge";
 export const Layout = ({ children }) => {
   return (
     <div className="relative w-full h-full">
-      {/* Circle Animate Component */}
-      {/*<CircleAnimate/>*/}
-
       <div className="absolute flex justify-center w-full h-full px-3 overflow-y-scroll z-10">
         <div className="relative w-full max-w-[1080px] h-full">
           <main

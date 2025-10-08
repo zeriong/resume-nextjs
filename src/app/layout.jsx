@@ -1,4 +1,5 @@
 import "./globals.css";
+import localFont from "next/font/local";
 
 // ? 메타데이터 상수
 const META_OBJ = {
@@ -24,10 +25,17 @@ export const metadata = {
   },
 };
 
+const pretendard = localFont({
+  src: "../assets/fonts/pretendard/PretendardVariable.woff2",
+  display: "swap",
+  weight: "100 900",
+  variable: "--font-pretendard",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="ko" className={`${pretendard.variable}`}>
+      <body className={pretendard.className}>{children}</body>
     </html>
   );
 }
