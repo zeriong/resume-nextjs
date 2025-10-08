@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-:root {
-}
-
 /* 테마 설정 */
 @theme {
   --color-primary: #4a86e8;

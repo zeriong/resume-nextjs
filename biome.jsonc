@@ -69,7 +69,10 @@
         "noConsole": "warn",
 
         // 알 수 없는 룰인 경우 경고만
-        "noUnknownAtRules": "warn",
+        "noUnknownAtRules": {
+          "level": "warn",
+          "options": {}
+        },
 
         // var 키워드 사용 금지 - 오류로 처리
         "noVar": "error",
