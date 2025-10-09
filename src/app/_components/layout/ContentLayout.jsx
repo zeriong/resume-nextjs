@@ -9,11 +9,11 @@ export const ContentLayout = ({ children }) => {
   return (
     <div className="relative w-full h-full bg-red-50">
       <div className="absolute left-0 flex justify-center w-full h-full overflow-y-scroll z-10">
-        <div className="relative w-full h-full bg-blue-50">
+        <div className="relative w-full h-full ">
           {/* Main Content */}
           <main
             className={twMerge(
-              "flex flex-col bg-white max-w-[1080px] w-full",
+              "flex flex-col bg-white max-w-[900px] w-full",
               "px-[80px] py-[64px] gap-y-[68px]",
               "max-sm:p-[24px_16px] max-lg:p-[32px_28px] max-lg:gap-y-[48px]",
             )}

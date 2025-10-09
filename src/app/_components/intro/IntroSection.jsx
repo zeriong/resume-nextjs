@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 import LinkList from "@/app/_components/intro/LinkList";
 import profilePng from "@/assets/images/profile.jpg";
 
@@ -41,8 +42,31 @@ export default function IntroSection() {
   return (
     <>
       {/* intro title */}
-      <section>
-        <p className="text-[50px] font-bold leading-[1.4] max-lg:text-[32px]">
+      <section
+        className={twMerge(
+          "flex items-center gap-[48px]",
+          "max-lg:flex-wrap max-sm:gap-[24px]",
+        )}
+      >
+        {/* profile image */}
+        {/* <div className="relative">
+          <div
+            className={twMerge(
+              "relative flex items-center justify-center w-[180px] h-[180px] rounded-full overflow-hidden",
+              "ring-1 ring-gray-300/80 bg-gradient-to-r from-[#e4eaee] to-[#dee1e6]",
+              "max-sm:w-[170px] max-sm:h-[170px]",
+            )}
+          >
+            <Image
+              src={profilePng}
+              className="absolute w-auto h-full"
+              alt="zeriong"
+            />
+          </div>
+        </div> */}
+
+        {/* intro my-title */}
+        <p className="text-[50px] font-bold leading-[1.4] max-lg:text-[32px] whitespace-nowrap">
           안녕하세요,
           <br />
           <span className={"text-primary"}>UX/DX</span> 지향 개발자
@@ -51,20 +75,10 @@ export default function IntroSection() {
         </p>
       </section>
 
-      {/* intro contact */}
-      <section className="flex gap-x-[48px] max-sm:flex-col items-center">
-        {/* img */}
-        <div className="relative">
-          <div className="relative flex items-center justify-center w-[180px] h-[180px] rounded-full ring-1 ring-gray-300/80 bg-gradient-to-r from-[#e4eaee] to-[#dee1e6] overflow-hidden">
-            <Image
-              src={profilePng}
-              className="absolute w-auto h-full"
-              alt="zeriong"
-            />
-          </div>
-        </div>
+      {/* contacts box */}
+      <section className="hidden gap-[48px] items-center max-sm:flex">
         {/* Contacts */}
-        <div className="text-base text-gray-500 leading-[1.4] py-2 max-sm:mt-[20px] flex flex-col gap-6">
+        <div className="text-base text-gray-500 leading-[1.4] flex flex-col gap-6">
           {LINK_LIST.map((item) => (
             <LinkList key={item.title} list={item} />
           ))}
@@ -73,53 +87,39 @@ export default function IntroSection() {
 
       {/* intro my self */}
       <section className="flex flex-col text-xl text-gray-700 leading-[1.8] gap-y-[24px] max-md:text-base">
-        빠른 이터레이션이 요구되는 환경 속에서 DX를 향상시켜 작업일정 내에 UX기반의
-        높은 완성도로 개발하는 것을 개발자의 주요 역량이라 믿으며 실천해왔습니다.
-        문제의 본질을 정확히 파악하여 가장 단순하면서도 본질적인 해법을 찾는 데
-        집중합니다. 프론트엔드부터 서버, 인프라, DevOps 등 여러 영역에서 경험을 쌓으며
-        프로세스 전반에 대한 이해와 문제 추론 능력을 향상시켜왔습니다. 팀의 생산성을
-        높이기 위해 동료와 컨벤션을 고민하며, 이해와 설득이 가능한 근거가 녹아든
-        코드를 지향합니다. 밝은 에너지와 공감 및 소통 능력으로 경직된 분위기를
-        순환시키고 함께 목표에 집중 할 수 있는 분위기를 이끌어 내는 강점을 가지고
-        있습니다.
         <p>
-          빠른 이터레이션이 요구되는 환경 속에서 개발하기 좋은 환경을 만들어{" "}
+          빠른 이터레이션이 요구되는 환경 속에서 DX를 향상시켜
           <span className={"text-primary font-semibold"}>
-            작업일정 내에 UX기반의 높은 완성도로 마무리하는 것
+            작업일정 내에 UX기반의 높은 완성도로 개발하는 것
           </span>
-          을 개발자의 주요 역량이라 믿으며 실천해왔습니다. 사용자 입장에서 고민하고
-          설계하며 이어지는 불필요한 개발적 요소를 최소화하고 문제의 본질을 정확히
-          파악하여 가장{" "}
+          을 개발자의 주요 역량이라 믿으며 실천해왔습니다.
+        </p>
+        <p>
+          문제의 본질을 정확히 파악하여 가장{" "}
           <span className={"text-primary font-semibold"}>
             단순하면서도 본질적인 해법을 찾는 데 집중
           </span>
           합니다.
         </p>
         <p>
-          프론트엔드 개발자로 커리어를 시작했지만, 다양한 분야를 경험하며{" "}
-          <span className={"text-primary font-semibold"}>
-            기술적 시야를 넓히는 것
-          </span>{" "}
-          또한 중요한 역량이라고 생각하며 프론트엔드뿐만 아닌 서버, 인프라, DevOps 등
-          여러 영역에서 경험을 쌓으며{" "}
+          프론트엔드부터 서버, 인프라, DevOps 등 여러 영역에서 경험을 쌓으며{" "}
           <span className={"text-primary font-semibold"}>
             프로세스 전반에 대한 이해와 문제 추론 능력
           </span>
           을 향상시켜왔습니다.
         </p>
         <p>
-          공식 문서 기반의 학습과 아키텍처 설계를 바탕으로{" "}
-          <span className={"text-primary font-semibold"}>
-            확장성과 유지보수성이 높은 클린 코드
-          </span>
-          를 작성하기 위해 노력하며 팀의 생산성을 높이기 위해 동료와 컨벤션을
-          고민하며, 이해와 설득이 가능한{" "}
+          팀의 생산성을 높이기 위해 동료와 컨벤션을 고민하며, 이해와 설득이 가능한
           <span className={"text-primary font-semibold"}>근거가 녹아든 코드</span>를
           지향합니다.
         </p>
         <p>
-          밝은 에너지와 친화력, 공감 및 소통 능력으로 경직된 분위기를 순환시키고 함께
-          목표에 집중 할 수 있는 분위기를 이끌어 내는 강점을 가지고 있습니다.
+          밝은 에너지와 공감 및 소통 능력으로
+          <span className={"text-primary font-semibold"}>
+            경직된 분위기를 순환시키고 함께 목표에 집중 할 수 있는 분위기를 이끌어
+            내는 강점
+          </span>
+          을 가지고 있습니다.
         </p>
       </section>
     </>
