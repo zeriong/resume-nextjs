@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import profilePng from "@/assets/images/profile.jpg";
 import LinkList from "@/app/_components/intro/LinkList";
+import profilePng from "@/assets/images/profile.jpg";
 
 export default function IntroSection() {
   const LINK_LIST = [
@@ -73,6 +73,15 @@ export default function IntroSection() {
 
       {/* intro my self */}
       <section className="flex flex-col text-xl text-gray-700 leading-[1.8] gap-y-[24px] max-md:text-base">
+        빠른 이터레이션이 요구되는 환경 속에서 DX를 향상시켜 작업일정 내에 UX기반의
+        높은 완성도로 개발하는 것을 개발자의 주요 역량이라 믿으며 실천해왔습니다.
+        문제의 본질을 정확히 파악하여 가장 단순하면서도 본질적인 해법을 찾는 데
+        집중합니다. 프론트엔드부터 서버, 인프라, DevOps 등 여러 영역에서 경험을 쌓으며
+        프로세스 전반에 대한 이해와 문제 추론 능력을 향상시켜왔습니다. 팀의 생산성을
+        높이기 위해 동료와 컨벤션을 고민하며, 이해와 설득이 가능한 근거가 녹아든
+        코드를 지향합니다. 밝은 에너지와 공감 및 소통 능력으로 경직된 분위기를
+        순환시키고 함께 목표에 집중 할 수 있는 분위기를 이끌어 내는 강점을 가지고
+        있습니다.
         <p>
           빠른 이터레이션이 요구되는 환경 속에서 개발하기 좋은 환경을 만들어{" "}
           <span className={"text-primary font-semibold"}>

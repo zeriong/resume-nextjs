@@ -3,10 +3,11 @@
 /**
  * 이력서 내용 카테고리 컴포넌트
  *
- * @param name - 카테고리 명칭
- * @param comment - 카테고리 명칭 옆 주석 내용
- * @param description - 카테고리 설명
- * @param {React.ReactNode} children - 하위 노드
+ * @param {Object} props - 카테고리 컴포넌트 속성
+ * @param {string | React.ReactNode} [props.name] - 카테고리 명칭
+ * @param {string | React.ReactNode} [props.comment] - 카테고리 명칭 옆 주석 내용
+ * @param {string | React.ReactNode} [props.description] - 카테고리 설명
+ * @param {React.ReactNode} [props.children] - 하위 노드
  * */
 export const Category = ({ name, comment, description, children }) => {
   return (
