@@ -1,7 +1,22 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
-  }
+    },
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": false,
+    "allowJs": true,
+    "checkJs": true
+  },
+  "include": [
+    "src/**/*",
+    "image.d.ts",
+    "svg.d.ts"  // 루트에 생성한 경우
+    // 또는 "src/types/**/*" - src/types에 생성한 경우
+  ],
+  "exclude": ["node_modules", ".next", "out", "build"]
 }
