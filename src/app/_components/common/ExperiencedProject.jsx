@@ -6,15 +6,16 @@ import GitSymbolSvg from "@/assets/svg/git-symbol.svg";
 /**
  * Experienced 카테고리 내에 프로젝트 정보 컴포넌트
  *
- * @param title - 프로젝트 명칭
- * @param pageLink - 사이트 링크
- * @param linkGithub - 깃허브 링크
- * @param description - 프로젝트 설명
- * @param preview - 프로젝트 프리뷰 이미지
- * @param devPart - 프로젝트 담당 파트
- * @param devDateRange - 프로젝트 진행 기간 범위 (예: 2020.09 ~ 2020.09)
- * @param devPeriod - 프로젝트 진행 시간 (예: 1개월)
- * @param {React.ReactNode} children - 하위 노드
+ * @param {Object} props - 프로젝트 정보 컴포넌트 속성
+ * @param {string | React.ReactNode} [props.title] - 프로젝트 명칭
+ * @param {string} [props.pageLink] - 사이트 링크
+ * @param {string} [props.linkGithub] - 깃허브 링크
+ * @param {string | React.ReactNode} [props.description] - 프로젝트 설명
+ * @param {string | import("next/image").StaticImageData} [props.preview] - 프로젝트 프리뷰 이미지
+ * @param {string | React.ReactNode} [props.devPart] - 프로젝트 담당 파트
+ * @param {string | React.ReactNode} [props.devDateRange] - 프로젝트 진행 기간 범위 (예: 2020.09 ~ 2020.09)
+ * @param {any} [props.devPeriod] - 프로젝트 진행 시간 (예: 1개월)
+ * @param {React.ReactNode} [props.children] - 하위 노드
  * */
 export const ExperiencedProject = ({
   title,
@@ -47,7 +48,7 @@ export const ExperiencedProject = ({
             target="_blank"
             className="flex items-center min-w-[40px] h-[22px] text-sm text-white bg-gray-600/90 rounded-full pl-1.5 pr-2"
           >
-            <GitSymbolSvg className="w-[16px]" alt="git" />
+            <GitSymbolSvg className="w-[16px]" />
             <i className="arrow-right !border-white ml-0.5"></i>
           </a>
         )}

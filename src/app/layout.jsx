@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/app/globals.css";
 import localFont from "next/font/local";
 
 // ? 메타데이터 상수

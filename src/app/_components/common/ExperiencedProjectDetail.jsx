@@ -11,11 +11,12 @@ import GitSymbolSvg from "@/assets/svg/git-symbol.svg";
 /**
  * Experienced 카테고리 내에 프로젝트의 세부정보 그룹 컴포넌트
  *
- * @param title - 부제
- * @param linkGithub - 깃허브 링크 URL
- * @param devDateRange - 진행 기간 (2023.09 ~ 2023.10)
- * @param {array} devList - 불릿 포인트가 노출되는 개발 목록
- * @param {addField[]} addFields - 추가적인 항목 리스트
+ * @param {Object} props - 프로젝트 세부정보 컴포넌트 속성
+ * @param {string | React.ReactNode} [props.title] - 부제
+ * @param {string} [props.linkGithub] - 깃허브 링크 URL
+ * @param {string} [props.devDateRange] - 진행 기간 (2023.09 ~ 2023.10)
+ * @param {array} [props.devList] - 불릿 포인트가 노출되는 개발 목록
+ * @param {addField[]} [props.addFields] - 추가적인 항목 리스트
  * */
 export const ExperiencedProjectDetail = ({
   title,
@@ -38,7 +39,7 @@ export const ExperiencedProjectDetail = ({
                 target="_blank"
                 className="flex items-center min-w-[40px] h-[22px] text-sm text-white bg-gray-600/90 rounded-full pl-1.5 pr-2"
               >
-                <GitSymbolSvg className="w-[16px]" alt="git" />
+                <GitSymbolSvg className="w-[16px]" />
                 <i className="arrow-right !border-white ml-0.5"></i>
               </a>
             )}
