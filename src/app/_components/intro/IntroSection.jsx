@@ -89,7 +89,7 @@ export default function IntroSection({ scrollDivListRef }) {
       {/* intro my self */}
       <section className="flex flex-col text-xl text-gray-700 leading-[1.8] gap-y-[24px] max-md:text-base">
         <p>
-          빠른 이터레이션이 요구되는 환경 속에서 DX를 향상시켜
+          빠른 이터레이션이 요구되는 환경 속에서 DX를 향상시켜{" "}
           <span className={"text-primary font-semibold"}>
             작업일정 내에 UX기반의 높은 완성도로 개발하는 것
           </span>
@@ -115,7 +115,7 @@ export default function IntroSection({ scrollDivListRef }) {
           지향합니다.
         </p>
         <p>
-          밝은 에너지와 공감 및 소통 능력으로
+          밝은 에너지와 공감 및 소통 능력으로{" "}
           <span className={"text-primary font-semibold"}>
             경직된 분위기를 순환시키고 함께 목표에 집중 할 수 있는 분위기를 이끌어
             내는 강점
