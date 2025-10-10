@@ -29,7 +29,15 @@
     "enabled": true,
     "rules": {
       "recommended": true,
-
+      "security": {
+        // dangerouslySetInnerHTML 사용 가능하도록 허용
+        "noDangerouslySetInnerHtml": "off"
+      },
+      "a11y": {
+        // div에도 onClick 이벤트 사용 가능하도록 허용
+        "noStaticElementInteractions": "off",
+        "useKeyWithClickEvents": "off"
+      },
       "correctness": {
         // 사용하지 않는 임포트문 포맷 세팅
         "noUnusedImports": {
