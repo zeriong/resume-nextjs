@@ -9,7 +9,10 @@ import preview05 from "@/assets/images/preview/preview05.jpg";
 import preview06 from "@/assets/images/preview/preview06.jpg";
 import GitSymbolSvg from "@/assets/svg/git-symbol.svg";
 
-export const Projects = () => {
+/**
+ * @param {{ scrollDivListRef: React.RefObject }} props - 스크롤 디비전 리스트 참조
+ */
+export const Projects = ({ scrollDivListRef }) => {
   return (
     <Category name="Projects">
       <div className="flex flex-col mt-[52px] gap-y-[44px]">

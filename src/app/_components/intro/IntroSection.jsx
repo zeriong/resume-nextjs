@@ -1,11 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import LinkList from "@/app/_components/intro/LinkList";
-import profilePng from "@/assets/images/profile.jpg";
 
-export default function IntroSection() {
+/**
+ * @param {{ scrollDivListRef: React.RefObject }} props - 스크롤 디비전 리스트 참조
+ */
+export default function IntroSection({ scrollDivListRef }) {
   const LINK_LIST = [
     {
       title: "Contact.",

@@ -1,6 +1,9 @@
 import { Category } from "@/app/_components/common/Category";
 
-export const Skills = () => {
+/**
+ * @param {{ scrollDivListRef: React.RefObject }} props - 스크롤 디비전 리스트 참조
+ */
+export const Skills = ({ scrollDivListRef }) => {
   return (
     <Category
       name="Skills"
