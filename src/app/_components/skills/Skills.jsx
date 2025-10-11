@@ -106,6 +106,46 @@ export const Skills = () => {
             프로젝트를 설계함
           </li>
         </Ul_SkillListWrapper>
+
+        <Ul_SkillListWrapper skillName="DevOps & Infra">
+          <li>
+            개발자간 소통비용을 절감하고 생산성을 높이기 위해 openapi-generator-cli를
+            활용하고 스크립트 구성함
+          </li>
+          <li>
+            Swagger 기반 API를 자동생성하기 위해 OpenAPI에서 eject한 mustache파일을
+            직접 커스텀하여 활용함
+          </li>
+          <li>
+            K6를 활용한 통신 테스트로 요청/응답 시 발생할 수 있는 이슈에 대해
+            공론화하는 등 취약점 보완을 지향함
+          </li>
+          <li>
+            NginX에서 gzip 서빙을 허용하고 필요 header만을 허용하여 최적화된
+            배포환경을 구성해본 경험이 있음
+          </li>
+          <li>
+            NginX에서 가상 포트 요청을 허용하고 가상 포트와 연결된 실사용 포트로
+            전달하는 리버스 프록시 구축
+          </li>
+          <li>
+            필요 환경에 따른 env파일을 생성하고 package.json - scripts에서 환경에 따른
+            명령어를 분기하여 구성함
+          </li>
+          <li>배포 타겟이 Node환경일 때 PM2를 활용하여 무중단 배포를 구현함</li>
+          <li>
+            Node환경이 아닌 경우 간단한 Fastify서버위에 실행시켜 무중단배포를 실현할
+            수 있음
+          </li>
+          <li>
+            Jenkins - pipeline을 직접 작성하여 배포 환경에서 헬스 체크 후 start /
+            reload로 분기하여 완전 자동화함
+          </li>
+          <li>
+            gitea + jenkins에서 Web Hook을 통해 연결하고 Trigger를 추가하여 CI/CD를
+            구현함
+          </li>
+        </Ul_SkillListWrapper>
       </div>
     </Category>
   );

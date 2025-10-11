@@ -3,10 +3,7 @@
 import { twMerge } from "tailwind-merge";
 import LinkList from "@/app/_components/intro/LinkList";
 
-/**
- * @param {{ scrollDivListRef: React.RefObject }} props - 스크롤 디비전 리스트 참조
- */
-export default function IntroSection({ scrollDivListRef }) {
+export default function IntroSection() {
   const LINK_LIST = [
     {
       title: "Contact.",

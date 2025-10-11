@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { twMerge } from "tailwind-merge";
+import Activities from "@/app/_components/activities/Activities";
 import { ToastContainer } from "@/app/_components/common/Toasts";
 import IntroSection from "@/app/_components/intro/IntroSection";
 import { ContentLayout } from "@/app/_components/layout/ContentLayout";
@@ -9,7 +10,6 @@ import { NavBar } from "@/app/_components/layout/NavBar";
 import { Projects } from "@/app/_components/projects/Projects";
 import { Skills } from "@/app/_components/skills/Skills";
 import useActiveNavEffect from "./_hooks/useActiveNavEffect";
-import Activities from "@/app/_components/activities/Activities";
 
 export default function Home() {
   const DIVIDE_WRAPPER_CLASSNAME = "flex flex-col gap-y-[68px] max-lg:gap-y-[48px]";
@@ -31,17 +31,19 @@ export default function Home() {
         <div
           ref={measureDivRef}
           className={twMerge(
-            "h-[1px] w-full sticky top-[64px] bg-red-500 z-10",
+            // ? 30% 위치에 sticky 적용하여 중립성을 유지함
+            "h-[1px] w-full sticky top-[30%]",
             "max-lg:top-[32px]",
           )}
         />
 
+        {/* Main Section */}
         {[
           {
             no: 1,
             id: "Intro",
             type: "main",
-            component: <IntroSection scrollDivListRef={scrollDivListRef} />,
+            component: <IntroSection />,
           },
           {
             no: 2,
