@@ -27,7 +27,8 @@ export default function useActiveNavEffect({ measureDivRef, scrollDivListRef }) 
 
       // 끝에 거의 닿았을 때 마지막 섹션 activeId 설정
       const { scrollTop, scrollHeight, clientHeight } = contentLayout;
-      if (scrollTop + clientHeight >= scrollHeight - 20) {
+      // ? 디바이스 별 오차를 고려한 - 2
+      if (scrollTop + clientHeight >= scrollHeight - 2) {
         lastActiveRef.current = sections.pop();
         setActiveId(lastActiveRef.current.id);
         return;
@@ -41,7 +42,7 @@ export default function useActiveNavEffect({ measureDivRef, scrollDivListRef }) 
 
       if (activeSection && lastActiveRef.current !== activeSection) {
         lastActiveRef.current = activeSection;
-        console.log("sticky와 부딪힌 섹션 ID:", activeSection.id);
+        // id를 activeId로 설정 (id === name)
         setActiveId(activeSection.id);
       }
     };
