@@ -61,6 +61,29 @@ export const Skills = () => {
           </li>
           <li>메모리누수, cleanup 등이 필요한 부분을 찾아내어 공유하고 리팩터링함</li>
         </Ul_SkillListWrapper>
+
+        <Ul_SkillListWrapper skillName="Next.js">
+          <li>
+            SEO( 검색엔진 최적화 )와 Web Accessibility( 웹접근성 )을 고려하여
+            Frontend를 개발함
+          </li>
+          <li>
+            Server-Side에서 HttpOnly쿠키를 핸들링하고 server-action을 통해 보안이
+            중요한 통신은 감추어 요청함
+          </li>
+          <li>
+            미들웨어를 활용한 api 인터셉터, 언어설정 쿠키 핸들링 등을 자연스러운
+            방향으로 설계함
+          </li>
+          <li>
+            Prisma ORM과 연계하여 Serverless Architecture기반 프로젝트를 구현할 수
+            있음
+          </li>
+          <li>
+            Server-Side / Client 분기점에 대한 이해도를 기반으로 빠른 디버깅을 할 수
+            있음
+          </li>
+        </Ul_SkillListWrapper>
       </div>
     </Category>
   );
