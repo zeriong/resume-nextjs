@@ -9,6 +9,7 @@ import { NavBar } from "@/app/_components/layout/NavBar";
 import { Projects } from "@/app/_components/projects/Projects";
 import { Skills } from "@/app/_components/skills/Skills";
 import useActiveNavEffect from "./_hooks/useActiveNavEffect";
+import Activities from "@/app/_components/activities/Activities";
 
 export default function Home() {
   const DIVIDE_WRAPPER_CLASSNAME = "flex flex-col gap-y-[68px] max-lg:gap-y-[48px]";
@@ -52,13 +53,13 @@ export default function Home() {
             no: 3,
             id: "Skills",
             type: "main",
-            component: <Skills scrollDivListRef={scrollDivListRef} />,
+            component: <Skills />,
           },
           {
             no: 4,
             id: "Activities",
             type: "main",
-            component: <Skills scrollDivListRef={scrollDivListRef} />,
+            component: <Activities />,
           },
         ].map((item) => {
           return (

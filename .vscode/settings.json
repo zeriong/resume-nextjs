@@ -12,6 +12,10 @@
     {
       "folderPath": "resume-nextjs\\src\\app\\_components\\common\\",
       "color": "foldercolorizer.color_6600ff"
+    },
+    {
+      "folderPath": "resume-nextjs\\src\\app\\_hooks\\",
+      "color": "foldercolorizer.color_cc66ff"
     }
   ],
 
