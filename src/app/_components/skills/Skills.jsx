@@ -95,6 +95,17 @@ export const Skills = () => {
             대한 이해기반으로 개발함
           </li>
         </Ul_SkillListWrapper>
+
+        <Ul_SkillListWrapper skillName="Python">
+          <li>
+            non-blocking 통신 라이브러리를 기반으로 요청취소가 가능하고 동시
+            처리효율이 좋은 구조로 개발함
+          </li>
+          <li>
+            Task Pool을 직접 구성하여 응답을 받기 전 취소할 수 있는 기능을 고려하며
+            프로젝트를 설계함
+          </li>
+        </Ul_SkillListWrapper>
       </div>
     </Category>
   );
