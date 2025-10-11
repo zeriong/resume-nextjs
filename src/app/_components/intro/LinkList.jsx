@@ -2,6 +2,7 @@
 
 export default function LinkList({ list }) {
   const { title, children } = list;
+
   return (
     <div className="flex flex-col gap-y-1.5">
       <p className="font-bold text-xl text-primary">{title}</p>
