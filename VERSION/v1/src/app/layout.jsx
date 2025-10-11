@@ -8,6 +8,7 @@ const META_OBJ = {
 };
 
 export const metadata = {
+  metadataBase: new URL("http://localhost:3000"),
   title: META_OBJ.TITLE,
   description: META_OBJ.DESCRIPTION,
   openGraph: {
