@@ -84,6 +84,17 @@ export const Skills = () => {
             있음
           </li>
         </Ul_SkillListWrapper>
+
+        <Ul_SkillListWrapper skillName="Nest.js">
+          <li>
+            TypeORM과 연계하여 쿼리문을 처리하고 테이블이 없는 경우 자동생성하는
+            구조로 서버 구현
+          </li>
+          <li>
+            Nest.js의 관심사분리 흐름과 Controller, Service, Repository 계층구조에
+            대한 이해기반으로 개발함
+          </li>
+        </Ul_SkillListWrapper>
       </div>
     </Category>
   );
