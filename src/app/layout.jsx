@@ -11,6 +11,7 @@ const META_OBJ = {
 export const metadata = {
   title: META_OBJ.TITLE,
   description: META_OBJ.DESCRIPTION,
+  metadataBase: new URL("https://portfolio.zeriong.com/"),
   openGraph: {
     title: META_OBJ.TITLE,
     description: META_OBJ.DESCRIPTION,
@@ -19,6 +20,7 @@ export const metadata = {
   twitter: {
     card: "summary",
     creator: "@argentinux",
+    images: ["/cover.jpg?v=1"],
   },
   robots: {
     index: false, // <meta name="robots" content="noindex" />
