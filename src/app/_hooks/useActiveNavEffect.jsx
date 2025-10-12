@@ -30,7 +30,7 @@ export default function useActiveNavEffect({ measureDivRef, scrollDivListRef }) 
       // ? 디바이스 별 오차를 고려한 - 2
       if (scrollTop + clientHeight >= scrollHeight - 2) {
         lastActiveRef.current = sections.pop();
-        setActiveDataName(lastActiveRef.current.node.dataset.name);
+        setActiveDataName(lastActiveRef.current.dataset.name);
         return;
       }
 
