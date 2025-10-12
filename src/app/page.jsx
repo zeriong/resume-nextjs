@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import Activities from "@/app/_components/activities/Activities";
 import { ToastContainer } from "@/app/_components/common/Toasts";
@@ -18,10 +18,25 @@ export default function Home() {
   // measureDivListRef 참조 객체
   const measureDivRef = useRef(null);
 
+  const [isRendered, setIsRendered] = useState(false);
+
   useActiveNavEffect({ scrollDivListRef, measureDivRef });
 
+  // init effect
+  useEffect(() => {
+    // ? 모든 컴포넌트가 렌더링 완료 되었을 때 한번에 렌더링
+    requestAnimationFrame(() => {
+      setIsRendered(true);
+    });
+  }, []);
+
   return (
-    <div className="w-full h-full flex">
+    <div
+      className={twMerge(
+        "w-full h-full flex transition-all duration-1000 opacity-0",
+        isRendered && "opacity-100",
+      )}
+    >
       {/* Navbar */}
       <NavBar scrollDivListRef={scrollDivListRef} />
 
