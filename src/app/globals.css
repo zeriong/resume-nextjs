@@ -52,6 +52,20 @@ ul > li:before {
   color: #3b82f6;
 }
 
+/* 리스트 폰인트 ( ul내부 li와 동일한 스타일 ) */
+.list-point {
+  position: relative;
+  padding: 4px 0 4px 16px;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    content: "•";
+    color: #3b82f6;
+  }
+}
+
 .arrow-right {
   border: solid black;
   border-width: 0 2px 2px 0;
