@@ -25,10 +25,12 @@ export default function Home() {
       {/* Navbar */}
       <NavBar scrollDivListRef={scrollDivListRef} />
 
+ 
       {/* Content Layout */}
       <ContentLayout>
-        {/* measureDivListRef */}
-        <div
+        
+              {/* measureDivListRef */}
+              <div
           ref={measureDivRef}
           className={twMerge(
             // ? 30% 위치에 sticky 적용하여 중립성을 유지함
@@ -37,8 +39,9 @@ export default function Home() {
           )}
         />
 
-        {/* Main Section */}
-        {[
+        <div className="flex flex-col gap-y-[68px] max-lg:gap-y-[48px]">
+{/* Main Section */}
+{[
           {
             no: 1,
             id: "Intro",
@@ -82,6 +85,9 @@ export default function Home() {
             </div>
           );
         })}
+        </div>
+
+        
       </ContentLayout>
 
       {/* Toasts */}
