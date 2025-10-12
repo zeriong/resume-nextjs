@@ -7,7 +7,7 @@ import { useNavStore } from "@/stores/useNavStore";
  * @param {React.RefObject<any>} [props.measureDivRef] - 측정 디비전 리스트 참조
  */
 export default function useActiveNavEffect({ measureDivRef, scrollDivListRef }) {
-  const { setActiveId } = useNavStore();
+  const { setActiveDataName } = useNavStore();
 
   const lastActiveRef = useRef(null);
 
@@ -25,12 +25,12 @@ export default function useActiveNavEffect({ measureDivRef, scrollDivListRef }) 
         Object.values(scrollDivListRef.current).map((item) => item.node),
       );
 
-      // 끝에 거의 닿았을 때 마지막 섹션 activeId 설정
+      // 끝에 거의 닿았을 때 마지막 섹션 data-name 세팅
       const { scrollTop, scrollHeight, clientHeight } = contentLayout;
       // ? 디바이스 별 오차를 고려한 - 2
       if (scrollTop + clientHeight >= scrollHeight - 2) {
         lastActiveRef.current = sections.pop();
-        setActiveId(lastActiveRef.current.id);
+        setActiveDataName(lastActiveRef.current.node.dataset.name);
         return;
       }
 
@@ -42,8 +42,8 @@ export default function useActiveNavEffect({ measureDivRef, scrollDivListRef }) 
 
       if (activeSection && lastActiveRef.current !== activeSection) {
         lastActiveRef.current = activeSection;
-        // id를 activeId로 설정 (id === name)
-        setActiveId(activeSection.id);
+        // data-name 세팅팅
+        setActiveDataName(activeSection.dataset.name);
       }
     };
 

@@ -6,7 +6,7 @@ import { useUIStore } from "@/stores/useUIStore";
  * @param {{ scrollDivListRef: React.RefObject }} props - 스크롤 디비전 리스트 참조
  */
 export const NavBar = ({ scrollDivListRef }) => {
-  const { activeId } = useNavStore();
+  const { activeDataName } = useNavStore();
   const { isContentRender } = useUIStore();
 
   // ? 스크롤 이동 함수
@@ -37,7 +37,9 @@ export const NavBar = ({ scrollDivListRef }) => {
         )}
       >
         {isContentRender &&
-          Object.values(scrollDivListRef.current).map((item) => {
+          Object.values(scrollDivListRef.current).map((item, idx) => {
+            const isMain = scrollDivListRef.current[item.node.id].type === "main";
+            const isActive = activeDataName === item.node.id;
             return (
               <button
                 key={item.node.id}
@@ -46,19 +48,17 @@ export const NavBar = ({ scrollDivListRef }) => {
                   // ! 기본 스타일
                   "transition-all duration-300 cursor-pointer text-start",
 
-                  // ! main인 경우
-                  scrollDivListRef.current[item.node.id].type === "main"
-                    ? "font-semibold text-[28px] pb-[12px]"
-                    : // ! sub인 경우
-                      scrollDivListRef.current[item.node.id].type === "sub" &&
-                        "font-medium",
+                  // ! main / sub 스타일 분기
+                  isMain
+                    ? "font-semibold text-[28px] pb-[2px]"
+                    : "text-[20px] font-medium pl-[8px]",
 
-                  // ! active flag
-                  activeId === item.node.id ? "text-primary" : "text-gray-400",
+                  // ! active / deActive 스타일 분기
+                  isActive ? "text-primary" : "text-gray-400",
                 )}
                 onClick={() => handleScroll(item)}
               >
-                {item.node.id}
+                {`${!isMain ? "• " : ""}${item.node.dataset.name}`}
               </button>
             );
           })}

@@ -3,11 +3,11 @@ import { devtools } from "zustand/middleware";
 
 export const useNavStore = create(
   devtools((setState) => ({
-    activeId: "Intro",
+    activeDataName: "Intro",
 
-    setActiveId: (id) => {
+    setActiveDataName: (dataName) => {
       setState(() => {
-        return { activeId: id };
+        return { activeDataName: dataName };
       });
     },
   })),

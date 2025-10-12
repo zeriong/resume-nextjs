@@ -25,12 +25,10 @@ export default function Home() {
       {/* Navbar */}
       <NavBar scrollDivListRef={scrollDivListRef} />
 
- 
       {/* Content Layout */}
       <ContentLayout>
-        
-              {/* measureDivListRef */}
-              <div
+        {/* measureDivListRef */}
+        <div
           ref={measureDivRef}
           className={twMerge(
             // ? 30% 위치에 sticky 적용하여 중립성을 유지함
@@ -40,54 +38,57 @@ export default function Home() {
         />
 
         <div className="flex flex-col gap-y-[68px] max-lg:gap-y-[48px]">
-{/* Main Section */}
-{[
-          {
-            no: 1,
-            id: "Intro",
-            type: "main",
-            component: <IntroSection />,
-          },
-          {
-            no: 2,
-            id: "Projects",
-            type: "main",
-            component: <Projects scrollDivListRef={scrollDivListRef} />,
-          },
-          {
-            no: 3,
-            id: "Skills",
-            type: "main",
-            component: <Skills />,
-          },
-          {
-            no: 4,
-            id: "Activities",
-            type: "main",
-            component: <Activities />,
-          },
-        ].map((item) => {
-          return (
-            <div
-              key={item.id}
-              id={item.id}
-              ref={(node) => {
-                if (node) {
-                  scrollDivListRef.current[item.id] = {};
-                  scrollDivListRef.current[item.id].node = node;
-                  scrollDivListRef.current[item.id].type = item.type;
-                  scrollDivListRef.current[item.id].no = item.no;
-                }
-              }}
-              className={DIVIDE_WRAPPER_CLASSNAME}
-            >
-              {item.component}
-            </div>
-          );
-        })}
+          {/* Main Section */}
+          {[
+            {
+              no: 1,
+              id: "Intro",
+              dataName: "Intro",
+              type: "main",
+              component: <IntroSection />,
+            },
+            {
+              no: 2,
+              id: "Projects",
+              dataName: "Projects",
+              type: "main",
+              component: <Projects scrollDivListRef={scrollDivListRef} />,
+            },
+            {
+              no: 3,
+              id: "Skills",
+              dataName: "Skills",
+              type: "main",
+              component: <Skills />,
+            },
+            {
+              no: 4,
+              id: "Activities",
+              dataName: "Activities",
+              type: "main",
+              component: <Activities />,
+            },
+          ].map((item) => {
+            return (
+              <div
+                key={item.id}
+                id={item.id}
+                data-name={item.dataName}
+                ref={(node) => {
+                  if (node) {
+                    scrollDivListRef.current[item.id] = {};
+                    scrollDivListRef.current[item.id].node = node;
+                    scrollDivListRef.current[item.id].type = item.type;
+                    scrollDivListRef.current[item.id].no = item.no;
+                  }
+                }}
+                className={DIVIDE_WRAPPER_CLASSNAME}
+              >
+                {item.component}
+              </div>
+            );
+          })}
         </div>
-
-        
       </ContentLayout>
 
       {/* Toasts */}
