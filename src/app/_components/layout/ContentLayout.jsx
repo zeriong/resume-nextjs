@@ -27,8 +27,8 @@ export const ContentLayout = ({ children }) => {
           <main
             className={twMerge(
               "flex flex-col bg-white max-w-[900px] w-full",
-              "px-[80px] py-[64px] gap-y-[68px]",
-              "max-sm:p-[24px_16px] max-lg:p-[32px_28px] max-lg:gap-y-[48px]",
+              "px-[80px] py-[64px]",
+              "max-sm:p-[24px_16px] max-lg:p-[32px_28px]",
             )}
           >
             {children}

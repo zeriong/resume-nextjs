@@ -32,8 +32,8 @@ export const NavBar = ({ scrollDivListRef }) => {
       <div
         className={twMerge(
           "flex flex-col bg-white grow",
-          "px-[80px] py-[64px] gap-y-[68px]",
-          "max-lg:p-[32px_28px] max-lg:gap-y-[48px]",
+          "p-[64px]",
+          "max-lg:p-[32px_28px]",
         )}
       >
         {isContentRender &&
@@ -42,15 +42,26 @@ export const NavBar = ({ scrollDivListRef }) => {
               <button
                 key={item.node.id}
                 type="button"
-                className="cursor-pointer"
+                className={twMerge(
+                  // ! 기본 스타일
+                  "transition-all duration-300 cursor-pointer text-start",
+
+                  // ! main인 경우
+                  scrollDivListRef.current[item.node.id].type === "main"
+                    ? "font-semibold text-[28px] pb-[12px]"
+                    : // ! sub인 경우
+                      scrollDivListRef.current[item.node.id].type === "sub" &&
+                        "font-medium",
+
+                  // ! active flag
+                  activeId === item.node.id ? "text-primary" : "text-gray-400",
+                )}
                 onClick={() => handleScroll(item)}
               >
                 {item.node.id}
               </button>
             );
           })}
-
-        {activeId}
       </div>
 
       {/* contact list */}
