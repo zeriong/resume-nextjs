@@ -1,13 +1,11 @@
-import { twMerge } from "tailwind-merge";
 import { useNavStore } from "@/stores/useNavStore";
-import { useUIStore } from "@/stores/useUIStore";
+import { twMerge } from "tailwind-merge";
 
 /**
  * @param {{ scrollDivListRef: React.RefObject }} props - 스크롤 디비전 리스트 참조
  */
 export const NavBar = ({ scrollDivListRef }) => {
   const { activeDataName } = useNavStore();
-  const { isContentRender } = useUIStore();
 
   // ? 스크롤 이동 함수
   const handleScroll = (item) => {
@@ -36,32 +34,31 @@ export const NavBar = ({ scrollDivListRef }) => {
           "max-lg:p-[32px_28px]",
         )}
       >
-        {isContentRender &&
-          Object.values(scrollDivListRef.current).map((item, idx) => {
-            const isMain = scrollDivListRef.current[item.node.id].type === "main";
-            const isActive = activeDataName === item.node.id;
-            return (
-              <button
-                key={item.node.id}
-                type="button"
-                className={twMerge(
-                  // ! 기본 스타일
-                  "transition-all duration-300 cursor-pointer text-start",
+        {Object.values(scrollDivListRef.current).map((item, idx) => {
+          const isMain = scrollDivListRef.current[item.node.id].type === "main";
+          const isActive = activeDataName === item.node.id;
+          return (
+            <button
+              key={item.node.id}
+              type="button"
+              className={twMerge(
+                // ! 기본 스타일
+                "transition-all duration-300 cursor-pointer text-start",
 
-                  // ! main / sub 스타일 분기
-                  isMain
-                    ? "font-semibold text-[28px] pb-[2px]"
-                    : "text-[20px] font-medium pl-[8px]",
+                // ! main / sub 스타일 분기
+                isMain
+                  ? "font-semibold text-[28px] pb-[2px]"
+                  : "text-[20px] font-medium pl-[8px]",
 
-                  // ! active / deActive 스타일 분기
-                  isActive ? "text-primary" : "text-gray-400",
-                )}
-                onClick={() => handleScroll(item)}
-              >
-                {`${!isMain ? "• " : ""}${item.node.dataset.name}`}
-              </button>
-            );
-          })}
+                // ! active / deActive 스타일 분기
+                isActive ? "text-primary" : "text-gray-400",
+              )}
+              onClick={() => handleScroll(item)}
+            >
+              {`${!isMain ? "• " : ""}${item.node.dataset.name}`}
+            </button>
+          );
+        })}
       </div>
 
       {/* contact list */}

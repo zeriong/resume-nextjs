@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { twMerge } from "tailwind-merge";
 import Activities from "@/app/_components/activities/Activities";
 import { ToastContainer } from "@/app/_components/common/Toasts";
 import IntroSection from "@/app/_components/intro/IntroSection";
@@ -9,7 +7,9 @@ import { ContentLayout } from "@/app/_components/layout/ContentLayout";
 import { NavBar } from "@/app/_components/layout/NavBar";
 import { Projects } from "@/app/_components/projects/Projects";
 import { Skills } from "@/app/_components/skills/Skills";
-import useActiveNavEffect from "./_hooks/useActiveNavEffect";
+import useActiveNavEffect from "@/app/_hooks/useActiveNavEffect";
+import { useEffect, useRef, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function Home() {
   const DIVIDE_WRAPPER_CLASSNAME = "flex flex-col gap-y-[68px] max-lg:gap-y-[48px]";
@@ -18,15 +18,14 @@ export default function Home() {
   // measureDivListRef 참조 객체
   const measureDivRef = useRef(null);
 
-  const [isRendered, setIsRendered] = useState(false);
+  const [isRender, setIsRender] = useState(false);
 
   useActiveNavEffect({ scrollDivListRef, measureDivRef });
 
-  // init effect
+  // requestAnimationFrame을 활용하여 렌더링을 보장함함
   useEffect(() => {
-    // ? 모든 컴포넌트가 렌더링 완료 되었을 때 한번에 렌더링
     requestAnimationFrame(() => {
-      setIsRendered(true);
+      setIsRender(true);
     });
   }, []);
 
@@ -34,7 +33,7 @@ export default function Home() {
     <div
       className={twMerge(
         "w-full h-full flex transition-all duration-1000 opacity-0",
-        isRendered && "opacity-100",
+        isRender && "opacity-100",
       )}
     >
       {/* Navbar */}

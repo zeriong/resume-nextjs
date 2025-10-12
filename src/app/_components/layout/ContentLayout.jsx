@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { twMerge } from "tailwind-merge";
-import { useUIStore } from "@/stores/useUIStore";
 
 /**
  * 페이지를 감싸는 레이아웃 컴포넌트
@@ -8,14 +6,6 @@ import { useUIStore } from "@/stores/useUIStore";
  * @param {{ children: React.ReactNode }} props - 하위 노드
  */
 export const ContentLayout = ({ children }) => {
-  const { setIsContentRender } = useUIStore();
-
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      setIsContentRender(true);
-    });
-  }, []);
-
   return (
     <div className="relative w-full h-full">
       <div
