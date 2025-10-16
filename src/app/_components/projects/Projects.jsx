@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { twMerge } from "tailwind-merge";
 import { Category } from "@/app/_components/common/Category";
 import { ExperiencedProject } from "@/app/_components/common/ExperiencedProject";
 import { ExperiencedProjectDetail } from "@/app/_components/common/ExperiencedProjectDetail";
@@ -10,8 +12,6 @@ import preview04 from "@/assets/images/preview/preview04.jpg";
 import preview05 from "@/assets/images/preview/preview05.jpg";
 import preview06 from "@/assets/images/preview/preview06.jpg";
 import GitSymbolSvg from "@/assets/svg/git-symbol.svg";
-import { useState } from "react";
-import { twMerge } from "tailwind-merge";
 
 /**
  * @param {{ scrollDivListRef: React.RefObject }} props - 스크롤 디비전 리스트 참조
@@ -24,14 +24,14 @@ export const Projects = ({ scrollDivListRef }) => {
         <div className="cursor-pointer relative">
           <div onClick={() => setIsOpen(!isOpen)}>아코디온 열기/닫기</div>
 
-          <div
+          {/* <div
             className={twMerge(
               "bg-red-500 transition-all duration-300 overflow-hidden",
               isOpen ? "max-h-full" : "max-h-0",
             )}
           >
             <div className=" h-[1000px]">아코디언 컨텐츠</div>
-          </div>
+          </div> */}
         </div>
         <ExperiencedProject
           title="ZETE AI 메모서비스"

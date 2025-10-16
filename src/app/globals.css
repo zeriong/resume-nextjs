@@ -3,6 +3,8 @@
 /* 테마 설정 */
 @theme {
   --color-primary: #4a86e8;
+  --color-secondary: #739fe6;
+  --color-tertiary: #a6c7f5;
 }
 
 @media (prefers-color-scheme: dark) {

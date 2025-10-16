@@ -1,5 +1,5 @@
-import { useNavStore } from "@/stores/useNavStore";
 import { twMerge } from "tailwind-merge";
+import { useNavStore } from "@/stores/useNavStore";
 
 /**
  * @param {{ scrollDivListRef: React.RefObject }} props - 스크롤 디비전 리스트 참조
@@ -29,7 +29,7 @@ export const NavBar = ({ scrollDivListRef }) => {
       {/* nav list */}
       <div
         className={twMerge(
-          "flex flex-col bg-white grow",
+          "flex flex-col bg-white grow overflow-y-auto",
           "p-[64px]",
           "max-lg:p-[32px_28px]",
         )}
@@ -62,16 +62,47 @@ export const NavBar = ({ scrollDivListRef }) => {
       </div>
 
       {/* contact list */}
-      <div>
-        <button type="button" className="">
-          Email
-        </button>
-        <button type="button" className="">
-          Github
-        </button>
-        <button type="button" className="">
-          Blog
-        </button>
+      <div className="flex flex-col gap-y-[60px] px-[44px] pb-[24px]">
+        <div className="flex flex-col gap-y-[16px] items-start text-primary">
+          <button type="button" className="font-semibold flex flex-col items-start">
+            <p>Email</p>
+            <button
+              type="button"
+              className="text-gray-500 cursor-pointer"
+              onClick={() => window.open("mailto:jaeryong95@gmail.com", "_blank")}
+            >
+              jaeryong95@gmail.com
+            </button>
+          </button>
+
+          <button type="button" className="font-semibold flex flex-col items-start">
+            <p>Github</p>
+            <a
+              href="https://github.com/zeriong"
+              target="_blank"
+              className="text-gray-500"
+              rel="noopener"
+            >
+              https://github.com/zeriong
+            </a>
+          </button>
+
+          <button type="button" className="font-semibold flex flex-col items-start">
+            <p>Blog</p>
+            <a
+              href="https://zeriong.tistory.com"
+              target="_blank"
+              className="text-gray-500"
+              rel="noopener"
+            >
+              https://zeriong.tistory.com
+            </a>
+          </button>
+        </div>
+
+        <div className="text-[14px] text-gray-400/60 font-semibold">
+          <div>last updated: 2023.10.05</div>
+        </div>
       </div>
     </nav>
   );
