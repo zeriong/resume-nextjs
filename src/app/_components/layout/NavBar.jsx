@@ -1,3 +1,5 @@
+"use client";
+
 import { twMerge } from "tailwind-merge";
 import { useNavStore } from "@/stores/useNavStore";
 
@@ -64,18 +66,20 @@ export const NavBar = ({ scrollDivListRef }) => {
       {/* contact list */}
       <div className="flex flex-col gap-y-[60px] px-[44px] pb-[24px]">
         <div className="flex flex-col gap-y-[16px] items-start text-primary">
-          <button type="button" className="font-semibold flex flex-col items-start">
+          <div className="font-semibold flex flex-col items-start">
             <p>Email</p>
             <button
               type="button"
               className="text-gray-500 cursor-pointer"
-              onClick={() => window.open("mailto:jaeryong95@gmail.com", "_blank")}
+              onClick={() => {
+                window.open("mailto:jaeryong95@gmail.com", "_blank");
+              }}
             >
               jaeryong95@gmail.com
             </button>
-          </button>
+          </div>
 
-          <button type="button" className="font-semibold flex flex-col items-start">
+          <div className="font-semibold flex flex-col items-start">
             <p>Github</p>
             <a
               href="https://github.com/zeriong"
@@ -85,9 +89,9 @@ export const NavBar = ({ scrollDivListRef }) => {
             >
               https://github.com/zeriong
             </a>
-          </button>
+          </div>
 
-          <button type="button" className="font-semibold flex flex-col items-start">
+          <div className="font-semibold flex flex-col items-start">
             <p>Blog</p>
             <a
               href="https://zeriong.tistory.com"
@@ -97,7 +101,7 @@ export const NavBar = ({ scrollDivListRef }) => {
             >
               https://zeriong.tistory.com
             </a>
-          </button>
+          </div>
         </div>
 
         <div className="text-[14px] text-gray-400/60 font-semibold">
