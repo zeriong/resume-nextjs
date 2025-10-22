@@ -27,7 +27,7 @@ export const NavBar = ({ scrollDivListRef }) => {
   };
 
   return (
-    <nav className="max-w-[300px] w-full flex flex-col max-sm:hidden">
+    <nav className="max-w-[340px] w-full flex flex-col max-sm:hidden">
       {/* nav list */}
       <div
         className={twMerge(
@@ -64,13 +64,13 @@ export const NavBar = ({ scrollDivListRef }) => {
       </div>
 
       {/* contact list */}
-      <div className="flex flex-col gap-y-[60px] px-[44px] pb-[24px]">
-        <div className="flex flex-col gap-y-[16px] items-start text-primary">
-          <div className="font-semibold flex flex-col items-start">
+      <div className="flex flex-col px-[44px] pb-[44px]">
+        <div className="flex flex-col gap-y-[2px] items-start text-primary">
+          <div className="font-semibold flex flex-col items-start px-[20px] py-[10px]">
             <p>Email</p>
             <button
               type="button"
-              className="text-gray-500 cursor-pointer"
+              className="text-gray-500 cursor-pointer text-[14px]"
               onClick={() => {
                 window.open("mailto:jaeryong95@gmail.com", "_blank");
               }}
@@ -79,24 +79,24 @@ export const NavBar = ({ scrollDivListRef }) => {
             </button>
           </div>
 
-          <div className="font-semibold flex flex-col items-start">
+          <div className="font-semibold flex flex-col items-start px-[20px] py-[10px]">
             <p>Github</p>
             <a
               href="https://github.com/zeriong"
               target="_blank"
-              className="text-gray-500"
+              className="text-gray-500 text-[14px]"
               rel="noopener"
             >
               https://github.com/zeriong
             </a>
           </div>
 
-          <div className="font-semibold flex flex-col items-start">
+          <div className="font-semibold flex flex-col items-start px-[20px] py-[10px]">
             <p>Blog</p>
             <a
               href="https://zeriong.tistory.com"
               target="_blank"
-              className="text-gray-500"
+              className="text-gray-500 text-[14px]"
               rel="noopener"
             >
               https://zeriong.tistory.com
@@ -104,7 +104,7 @@ export const NavBar = ({ scrollDivListRef }) => {
           </div>
         </div>
 
-        <div className="text-[14px] text-gray-400/60 font-semibold">
+        <div className="text-[12px] text-gray-400/60 font-semibold p-[20px] pb-0">
           <div>last updated: 2023.10.05</div>
         </div>
       </div>
