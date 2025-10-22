@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { twMerge } from "tailwind-merge";
 import { Category } from "@/app/_components/common/Category";
 import { ExperiencedProject } from "@/app/_components/common/ExperiencedProject";
 import { ExperiencedProjectDetail } from "@/app/_components/common/ExperiencedProjectDetail";
@@ -17,12 +15,11 @@ import GitSymbolSvg from "@/assets/svg/git-symbol.svg";
  * @param {{ scrollDivListRef: React.RefObject }} props - 스크롤 디비전 리스트 참조
  */
 export const Projects = ({ scrollDivListRef }) => {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <Category name="Projects">
-      <div className="flex flex-col mt-[52px] gap-y-[44px]">
+      <div className="flex flex-col mt-[20px] gap-y-[44px]">
         <div className="cursor-pointer relative">
-          <div onClick={() => setIsOpen(!isOpen)}>아코디온 열기/닫기</div>
+          {/* <div onClick={() => setIsOpen(!isOpen)}>아코디온 열기/닫기</div> */}
 
           {/* <div
             className={twMerge(

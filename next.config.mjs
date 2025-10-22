@@ -11,6 +11,8 @@ const nextConfig = {
     },
   },
 
+  devIndicators: false,
+
   /** svgr 관련 설정 */
   webpack(config) {
     // @public alias 추가
