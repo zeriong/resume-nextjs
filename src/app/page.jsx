@@ -1,15 +1,16 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import { twMerge } from "tailwind-merge";
 import Activities from "@/app/_components/activities/Activities";
 import { ToastContainer } from "@/app/_components/common/Toasts";
+import { Experiences } from "@/app/_components/Experiences/Experiences";
 import IntroSection from "@/app/_components/intro/IntroSection";
 import { ContentLayout } from "@/app/_components/layout/ContentLayout";
 import { NavBar } from "@/app/_components/layout/NavBar";
 import { Projects } from "@/app/_components/projects/Projects";
 import { Skills } from "@/app/_components/skills/Skills";
 import useActiveNavEffect from "@/app/_hooks/useActiveNavEffect";
-import { useEffect, useRef, useState } from "react";
-import { twMerge } from "tailwind-merge";
 
 export default function Home() {
   const DIVIDE_WRAPPER_CLASSNAME = "flex flex-col gap-y-[68px] max-lg:gap-y-[48px]";
@@ -63,20 +64,27 @@ export default function Home() {
             },
             {
               no: 2,
+              id: "Experiences",
+              dataName: "Experiences",
+              type: "main",
+              component: <Experiences scrollDivListRef={scrollDivListRef} />,
+            },
+            {
+              no: 3,
               id: "Projects",
               dataName: "Projects",
               type: "main",
               component: <Projects scrollDivListRef={scrollDivListRef} />,
             },
             {
-              no: 3,
+              no: 4,
               id: "Skills",
               dataName: "Skills",
               type: "main",
               component: <Skills />,
             },
             {
-              no: 4,
+              no: 5,
               id: "Activities",
               dataName: "Activities",
               type: "main",

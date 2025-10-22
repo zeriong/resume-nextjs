@@ -12,13 +12,13 @@ export const ContentLayout = ({ children }) => {
         id="content_layout"
         className="absolute left-0 flex justify-center w-full h-full overflow-y-scroll z-10"
       >
-        <div className="w-full h-full ">
+        <div className="w-full h-full">
           {/* Main Content */}
           <main
             className={twMerge(
-              "flex flex-col bg-white max-w-[844px] w-full",
-              "px-[80px] pt-[64px] pb-[110px]",
-              "max-sm:p-[24px_16px] max-lg:p-[32px_28px]",
+              "flex flex-col bg-white max-w-[862px] w-full",
+              "px-[80px] pt-[64px] pb-[102px]",
+              "max-sm:p-[24px_16px] max-lg:p-[32px_28px] ",
             )}
           >
             {children}
