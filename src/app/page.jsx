@@ -46,9 +46,8 @@ export default function Home() {
         <div
           ref={measureDivRef}
           className={twMerge(
-            // ? 30% 위치에 sticky 적용하여 중립성을 유지함
-            "h-[1px] w-full sticky top-[30%]",
-            "max-lg:top-[32px]",
+            // ? 40% 위치에 sticky 적용하여 중립성을 유지함
+            "h-[1px] w-full sticky top-[40%]",
           )}
         />
 
@@ -62,13 +61,13 @@ export default function Home() {
               type: "main",
               component: <IntroSection />,
             },
-            {
-              no: 2,
-              id: "Experiences",
-              dataName: "Experiences",
-              type: "main",
-              component: <Experiences scrollDivListRef={scrollDivListRef} />,
-            },
+            // {
+            //   no: 2,
+            //   id: "Experiences",
+            //   dataName: "Experiences",
+            //   type: "main",
+            //   component: <Experiences scrollDivListRef={scrollDivListRef} />,
+            // },
             {
               no: 3,
               id: "Projects",
