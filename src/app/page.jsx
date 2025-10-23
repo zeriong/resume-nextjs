@@ -61,13 +61,13 @@ export default function Home() {
               type: "main",
               component: <IntroSection />,
             },
-            // {
-            //   no: 2,
-            //   id: "Experiences",
-            //   dataName: "Experiences",
-            //   type: "main",
-            //   component: <Experiences scrollDivListRef={scrollDivListRef} />,
-            // },
+            {
+              no: 2,
+              id: "Experiences",
+              dataName: "Experiences",
+              type: "main",
+              component: <Experiences scrollDivListRef={scrollDivListRef} />,
+            },
             {
               no: 3,
               id: "Projects",
