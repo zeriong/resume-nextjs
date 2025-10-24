@@ -11,6 +11,7 @@ import preview04 from "@/assets/images/preview/preview04.jpg";
 import preview05 from "@/assets/images/preview/preview05.jpg";
 import preview06 from "@/assets/images/preview/preview06.jpg";
 import GitSymbolSvg from "@/assets/svg/git-symbol.svg";
+import { QubitonExperience } from "./company/QubitonExperience";
 
 /**
  * @param {{ scrollDivListRef: React.RefObject }} props - 스크롤 디비전 리스트 참조
@@ -19,7 +20,7 @@ export const Experiences = ({ scrollDivListRef }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Category name="Experiences">
-      <div className="flex flex-col mt-[20px] gap-y-[44px]"></div>
+      <QubitonExperience />
     </Category>
   );
 };
