@@ -51,7 +51,7 @@ export default function Home() {
           )}
         />
 
-        <div className="flex flex-col gap-y-[68px] max-lg:gap-y-[48px]">
+        <div className="flex flex-col">
           {/* Main Section */}
           {[
             {

@@ -17,7 +17,7 @@ import GitSymbolSvg from "@/assets/svg/git-symbol.svg";
 export const Projects = ({ scrollDivListRef }) => {
   return (
     <Category name="Projects">
-      <div className="flex flex-col mt-[20px] gap-y-[44px]">
+      <div className="flex flex-col gap-y-[44px]">
         <div className="cursor-pointer relative">
           {/* <div onClick={() => setIsOpen(!isOpen)}>아코디온 열기/닫기</div> */}
 
