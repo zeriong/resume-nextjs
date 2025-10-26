@@ -23,7 +23,11 @@ export const Category = forwardRef(
    */
   ({ name, comment, description, id, children }, ref) => {
     return (
-      <section ref={ref} id={id} className={"mt-[68px] max-lg:mt-[48px]"}>
+      <section
+        ref={ref}
+        id={id}
+        className={"mt-[68px] max-lg:mt-[48px] pb-[48px] max-lg:pb-[24px]"}
+      >
         <div className="relative flex items-center">
           <p className="text-[36px] text-primary font-semibold leading-none max-sm:text-[28px]">
             {name}

@@ -18,8 +18,10 @@ export const ExperiencesFrame = ({ title, description, children }) => {
         <p className="text-2xl text-gray-700 font-semibold">{title}</p>
       </div>
       <p className="w-full text-base text-gray-600 py-3">{description}</p>
-      <div className="flex gap-x-[52px] gap-y-[28px] mt-[32px] max-md:flex-col max-md:mt-[8px]">
-        <div className="flex flex-col gap-y-[44px]">{children}</div>
+
+      {/* 주요업무, 트러블슈팅, 개선사항 등 프로젝트 성과 소개 */}
+      <div className="flex flex-col gap-y-[28px] mt-[28px] max-md:flex-col max-md:mt-[8px]">
+        {children}
       </div>
     </article>
   );

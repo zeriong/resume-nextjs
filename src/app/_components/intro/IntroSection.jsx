@@ -38,7 +38,7 @@ export default function IntroSection() {
   ];
 
   return (
-    <>
+    <div className="flex flex-col gap-y-[68px] max-lg:gap-y-[48px] min-h-[calc(100vh-102px)] ">
       {/* intro title */}
       <section
         className={twMerge(
@@ -84,7 +84,7 @@ export default function IntroSection() {
       </section>
 
       {/* intro my self */}
-      <section className="flex flex-col text-xl text-gray-700 leading-[1.8] gap-y-[24px] max-md:text-base">
+      <section className="flex flex-col text-xl text-gray-700 leading-[1.8] gap-y-[24px] max-md:text-base ">
         <p>
           빠른 이터레이션이 요구되는 환경 속에서 DX를 향상시켜{" "}
           <span className={"text-primary font-semibold"}>
@@ -120,6 +120,6 @@ export default function IntroSection() {
           을 가지고 있습니다.
         </p>
       </section>
-    </>
+    </div>
   );
 }
