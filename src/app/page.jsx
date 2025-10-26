@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import Activities from "@/app/_components/activities/Activities";
-import { ToastContainer } from "@/app/_components/common/Toasts";
+import { ToastContainer } from "@/app/_components/common/overlays/Toasts";
 import { Experiences } from "@/app/_components/Experiences/Experiences";
 import IntroSection from "@/app/_components/intro/IntroSection";
 import { ContentLayout } from "@/app/_components/layout/ContentLayout";

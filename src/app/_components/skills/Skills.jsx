@@ -1,4 +1,4 @@
-import { Category } from "@/app/_components/common/Category";
+import { Category } from "@/app/_components/common/content/Category";
 
 export const Skills = () => {
   // ? 스킬 서브 아이템 컴포넌트

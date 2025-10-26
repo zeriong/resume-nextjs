@@ -1,5 +1,5 @@
-import { Category } from "@/app/_components/common/Category";
-import { LinkInline } from "@/app/_components/common/LinkInline";
+import { Category } from "@/app/_components/common/content/Category";
+import { LinkInline } from "@/app/_components/common/content/LinkInline";
 
 const Activities = () => {
   return (

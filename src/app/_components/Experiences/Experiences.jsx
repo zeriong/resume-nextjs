@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Category } from "@/app/_components/common/Category";
-import { ExperiencedProject } from "@/app/_components/common/ExperiencedProject";
-import { ExperiencedProjectDetail } from "@/app/_components/common/ExperiencedProjectDetail";
+import { Category } from "@/app/_components/common/content/Category";
+import { ExperiencedProject } from "@/app/_components/common/content/ExperiencedProject";
+import { ExperiencedProjectDetail } from "@/app/_components/common/content/ExperiencedProjectDetail";
 import preview01 from "@/assets/images/preview/preview01.jpg";
 import preview02 from "@/assets/images/preview/preview02.jpg";
 import preview03 from "@/assets/images/preview/preview03.jpg";

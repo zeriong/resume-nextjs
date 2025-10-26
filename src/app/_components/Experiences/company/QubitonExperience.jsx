@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ExperiencesCompanyFrame } from "@/app/_components/common/new-experiences/ExperiencesCompanyFrame";
-import { ExperiencesContent } from "@/app/_components/common/new-experiences/ExperiencesContent";
-import { ExperiencesFrame } from "@/app/_components/common/new-experiences/ExperiencesFrame";
+import { ExperiencesCompanyFrame } from "@/app/_components/common/content/new-experiences/ExperiencesCompanyFrame";
+import { ExperiencesContent } from "@/app/_components/common/content/new-experiences/ExperiencesContent";
+import { ExperiencesFrame } from "@/app/_components/common/content/new-experiences/ExperiencesFrame";
 
 export const QubitonExperience = () => {
   return (
