@@ -37,7 +37,12 @@ const pretendard = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="ko" className={`${pretendard.variable}`}>
-      <body className={pretendard.className}>{children}</body>
+      <body className={pretendard.className}>
+        {children}
+
+        {/* Portal Root ( 모달, 툴팁 등 포탈 요소를 렌더링할 때 사용 ) */}
+        <div id="portal-root" />
+      </body>
     </html>
   );
 }
