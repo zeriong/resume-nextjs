@@ -20,6 +20,13 @@
     {
       "folderPath": "resume-nextjs\\src\\app\\_components\\common\\new-experiences\\",
       "color": "foldercolorizer.color_00ccff"
+    },
+    {
+      "folderPath": "resume-nextjs\\src\\app\\_components\\common\\overlays\\Toasts.jsx\\"
+    },
+    {
+      "folderPath": "resume-nextjs\\src\\app\\_components\\common\\overlays\\",
+      "color": "foldercolorizer.color_66ffff"
     }
   ],
 

@@ -1,3 +1,7 @@
+"use client";
+
+import Portal from "@/app/_components/common/overlays/Portal";
+
 /**
  *
  * @param {Object} props
@@ -6,8 +10,12 @@
  */
 export const Dialog = ({ children }) => {
   return (
-    <dialog className="fixed inset-0 bg-black/50 flex items-center justify-center">
-      {children}
-    </dialog>
+    <Portal>
+      <dialog className="fixed inset-0 bg-black/50 flex items-center justify-center">
+        {children}
+      </dialog>
+    </Portal>
   );
 };
+
+export default Dialog;

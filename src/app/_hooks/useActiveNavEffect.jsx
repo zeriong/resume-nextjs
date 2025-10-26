@@ -42,7 +42,7 @@ export default function useActiveNavEffect({ measureDivRef, scrollDivListRef }) 
 
       if (activeSection && lastActiveRef.current !== activeSection) {
         lastActiveRef.current = activeSection;
-        // data-name 세팅팅
+        // data-name 세팅
         setActiveDataName(activeSection.dataset.name);
       }
     };

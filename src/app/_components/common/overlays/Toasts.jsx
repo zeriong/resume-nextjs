@@ -2,6 +2,7 @@
 
 import DOMPurify from "isomorphic-dompurify";
 import { useEffect, useMemo, useRef } from "react";
+import Portal from "@/app/_components/common/overlays/Portal";
 import ErrorIcon from "@/assets/svg/toast/error-icon.svg";
 import SuccessIcon from "@/assets/svg/toast/success-icon.svg";
 import WarnIcon from "@/assets/svg/toast/warn-icon.svg";
@@ -114,26 +115,28 @@ export const ToastContainer = () => {
   }, [useToastStore.getState().toasts]);
 
   return (
-    <div
-      ref={toastDivRef}
-      className={`left-1/2 -translate-x-1/2 fixed z-[99999] max-w-[calc(100%-40px)]
+    <Portal>
+      <div
+        ref={toastDivRef}
+        className={`left-1/2 -translate-x-1/2 fixed z-[99999] max-w-[calc(100%-40px)]
        items-center rounded-[8px] border border-[#106C6C] text-[#106C6C] text-[14px] font-[400] 
        leading-[20px] duration-300 ease-in-out px-[12px] py-[8px] top-0 opacity-0 hidden
        bg-[#CCEDED]
       `}
-    >
-      {toastStore.toasts.length >= 0 && (
-        <div className="flex items-center">
-          {iconMemo}
-          <div
-            className="w-full font-medium text-[16px]  flex items-center -translate-y-[1px]"
-            dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(toastStore.toasts[0]?.message),
-            }}
-          />
-        </div>
-      )}
-    </div>
+      >
+        {toastStore.toasts.length >= 0 && (
+          <div className="flex items-center">
+            {iconMemo}
+            <div
+              className="w-full font-medium text-[16px]  flex items-center -translate-y-[1px]"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(toastStore.toasts[0]?.message),
+              }}
+            />
+          </div>
+        )}
+      </div>
+    </Portal>
   );
 };
 
