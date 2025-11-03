@@ -73,8 +73,8 @@ export const Projects = ({ scrollDivListRef }) => {
               "React를 기반으로 프론트엔드의 메모, 카테고리, 태그에 대한 CRUD 인터페이스 개발",
               "Openai ChatGpt3.5 를 연동하여 채팅형식의 정보 검색과 요약 메모기능 개발",
               <>
-                Openapi Generator 의 templates 기능을 통해 axios 통신 타입 파일을
-                커스텀하여 생성
+                Openapi Generator 의 templates 기능을 통해 axios 통신 타입
+                파일을 커스텀하여 생성
                 <span className="text-gray-400 ml-0.5">(생산성 증가)</span>
               </>,
             ]}
@@ -97,8 +97,7 @@ export const Projects = ({ scrollDivListRef }) => {
           title="유튜브 요약 서비스"
           pageLink="https://side.zeriong.com/"
           linkGithub="https://github.com/zeriong/side-project"
-          description="유튜브 영상의 내용을 텍스트로 요약해 주는 서비스를 개발하는 6인 규모의 사이드 프로젝트 팀에 참여하여 서비스 영역의 프론트엔드 개발을 담당하였고
-                      PL의 동의하에 본인이 개발한 파트만 분리하여 게재하였습니다."
+          description="유튜브 영상의 내용을 텍스트로 요약해 주는 서비스를 개발하는 6인 규모의 사이드 프로젝트 팀에 참여하여 서비스 영역의 프론트엔드 개발을 담당하였고 PL의 동의하에 본인이 개발한 파트만 분리하여 게재하였습니다."
           preview={preview02}
           devPart="Frontend Engineer"
           devDateRange="2023.03 ~ 2023.04"
@@ -117,22 +116,22 @@ export const Projects = ({ scrollDivListRef }) => {
                 title: "Review",
                 content: (
                   <>
-                    프로젝트 초기에 과한 열정으로 일정 대비 너무 많은 작업량을 맡거나
-                    문제를 혼자서만 해결하려 하다 팀 일정에 차질을 주어 문제를
-                    겪은적이 있습니다.
+                    프로젝트 초기에 과한 열정으로 일정 대비 너무 많은 작업량을
+                    맡거나 문제를 혼자서만 해결하려 하다 팀 일정에 차질을 주어
+                    문제를 겪은적이 있습니다.
                     <br />
                     <br />
-                    이때 커뮤니케이션의 중요성과 함께 일을 한다는 의미를 좀 더 깊게
-                    깨닫게 되었고, 적극적인 소통을 통해 작업을 분배하고 실현 가능한
-                    일정을 계획하여 팀 작업 일정을 앞당겨 문제를 개선한 경험이
-                    있습니다. 이후로 상황과 생각을 공유하고 보완하는 자세로 임하려
-                    노력하고 있습니다.
+                    이때 커뮤니케이션의 중요성과 함께 일을 한다는 의미를 좀 더
+                    깊게 깨닫게 되었고, 적극적인 소통을 통해 작업을 분배하고
+                    실현 가능한 일정을 계획하여 팀 작업 일정을 앞당겨 문제를
+                    개선한 경험이 있습니다. 이후로 상황과 생각을 공유하고
+                    보완하는 자세로 임하려 노력하고 있습니다.
                     <br />
                     <br />
-                    또한, 주요 기획에 해당하는 유튜브 플레이어 커스텀에 대한 저작권
-                    문제의 여지를 파악하여 검증된 자료를 찾아 공유하고 기술적으로
-                    해결할 수 있는 더 나은 수단들을 제안하여 프로젝트 방향성에 크게
-                    기여하였습니다.
+                    또한, 주요 기획에 해당하는 유튜브 플레이어 커스텀에 대한
+                    저작권 문제의 여지를 파악하여 검증된 자료를 찾아 공유하고
+                    기술적으로 해결할 수 있는 더 나은 수단들을 제안하여 프로젝트
+                    방향성에 크게 기여하였습니다.
                   </>
                 ),
               },
@@ -428,8 +427,12 @@ export const Projects = ({ scrollDivListRef }) => {
                 <div className="flex flex-col border-l border-gray-300/90 mt-4 pl-4 gap-y-2 max-md:pl-4">
                   {chapter.list.map((item, idx2) => (
                     <div key={idx2}>
-                      <p className="text-gray-700 font-semibold">{item.title}</p>
-                      <p className="text-sm text-gray-600">{item.description}</p>
+                      <p className="text-gray-700 font-semibold">
+                        {item.title}
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        {item.description}
+                      </p>
                     </div>
                   ))}
                 </div>
