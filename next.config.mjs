@@ -2,6 +2,15 @@ import path from "path";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 프로덕션 브라우저 소스맵 비활성화 (빌드 속도 및 보안 향상)
+  productionBrowserSourceMaps: false,
+
+  // react-compiler 사용
+  reactCompiler: true,
+
+  // pnpm 호환성을 위한 transpile 설정
+  transpilePackages: ["isomorphic-dompurify"],
+
   turbopack: {
     rules: {
       "*.svg": {
@@ -23,7 +32,7 @@ const nextConfig = {
 
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.(".svg"),
+      rule.test?.test?.(".svg")
     );
 
     config.module.rules.push(
@@ -39,7 +48,7 @@ const nextConfig = {
         issuer: fileLoaderRule.issuer,
         resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
         use: ["@svgr/webpack"],
-      },
+      }
     );
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
